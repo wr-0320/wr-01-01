@@ -9,9 +9,9 @@
 | Global mixture | Missing before this extraction | Highest-priority structural baseline | Implemented in this repository with matched emissions and supervision |
 | Source-level mixture | Missing before this extraction | Highest-priority structural baseline | Implemented in this repository with matched emissions and supervision |
 | Controlled reliability heterogeneity | 3 development seeds, 4 matched profiles, 25,200 model-episode evaluations; actual cell-rate SD rose from 0.0155 to 0.0456 while overall test contamination stayed near 6% | Source-region prior showed no stable accuracy, Brier, or NLL advantage; predeclared decision favors global mixture as the main candidate | Retain as development evidence; do not claim equivalence and do not expand to formal seeds before freezing the revised mixture-likelihood claim |
-| Student-t likelihood | Missing | Direct robust-generative baseline | Implement after granularity smoke and development checks |
-| Reliability-weighted fusion | Existing related negative development uses a different learned attenuation setup | Needs a clean matched baseline | Implement after granularity comparison; do not reuse the old result as equivalent |
-| Huber/trimmed fusion | Missing | Robust-estimation baseline | Implement after granularity comparison |
+| Student-t likelihood | 3 matched development seeds; 80.62% accuracy, 0.2149 Brier, 0.3208 NLL | Implemented direct robust-generative comparator; interval versus global mixture crosses zero | Keep as required secondary formal comparator |
+| Reliability-weighted fusion | 3 matched development seeds; 77.48% accuracy, 0.2666 Brier, 0.4220 NLL | Clean matched linear weighting does not reproduce the dual-mixture result | Keep as a structural control; do not substitute the older learned attenuation study |
+| Huber robust likelihood | 3 matched development seeds; 81.05% accuracy, 0.2129 Brier, 0.3195 NLL | Strongest development robust comparator; interval versus global mixture crosses zero | Frozen as the primary formal comparator |
 | Contamination-rate scan | Missing | Sensitivity gap | Single-factor scan after direct baselines |
 | Reliability-error scan | Missing | Sensitivity gap | Bias and random perturbation after direct baselines |
 | Correlation-strength scan | One fixed strength only | Sensitivity gap | Extend from independence to several frozen strengths |
@@ -20,4 +20,3 @@
 Evidence snapshots are copied under `evidence/source_snapshot/`. They are historical
 inputs and must never be overwritten by new runs. New development output goes under
 `outputs/development/`; future formal output must use a new frozen directory.
-

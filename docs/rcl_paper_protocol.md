@@ -1,64 +1,68 @@
-# RCL journal study: frozen working protocol
+# RCL journal study: revised working protocol
 
 ## Research question
 
-Does a source-region-conditioned mixture likelihood infer hidden situations from
-contaminated multi-source observations more accurately and with better probability
-quality than simpler robust fusion models under matched information and evaluation
-conditions?
+When a report may arise from either a reliable or contaminated generation
+mechanism, does a dual-mechanism mixture likelihood improve hidden-situation
+probability inference over single-mechanism and robust-likelihood alternatives?
 
-## Main method
+## Main method candidate
 
-The paper's main method is source-region RCL:
+The paper's main candidate is a global dual-mechanism mixture likelihood:
 
-- reliable and compromised report-generation components;
-- source-region-conditioned reliability;
-- marginalization over the latent report mechanism;
+- separate reliable and compromised report-generation components;
+- a fitted global prior over the latent report mechanism;
+- marginalization over mechanism uncertainty;
 - sequential posterior updating over the hidden situation.
 
+Source-region reliability-prior granularity is an optional parameterization. The
+controlled heterogeneity scan did not show a stable benefit from that finer
+prior. The reliable and compromised emission distributions remain conditioned on
+source and region, so this decision does not remove all source-region structure.
+
 LM-RCL, the dual-head GRU, active sensing/stopping, correlation-aware RCL, and
-intent-coupled RCL are supporting or boundary studies, not contributions of this
-paper. Existing NO-GO results remain in the evidence record.
+intent-coupled RCL remain supporting or boundary studies. Their existing NO-GO
+results stay in the evidence record.
 
-## Matched first-round comparison
+## Matched mechanism comparison
 
-The first structural experiment compares:
+The comparison contains:
 
-1. single reliable mechanism;
-2. global two-mechanism mixture;
-3. source-level two-mechanism mixture;
-4. source-region RCL.
+1. single reliable Gaussian mechanism;
+2. global reliable/compromised Gaussian mixture;
+3. Student-t reliable likelihood;
+4. Huber reliable pseudo-likelihood;
+5. reliability-weighted Gaussian fusion.
 
-All four variants use the same reliable and compromised emission estimates, the
-same mechanism-labeled fitting records, the same hidden-situation labels, the same
-validation cases, independent temperature calibration by the same frozen rule,
-the same fixed commit step, and paired test scenarios. Only the mixture-prior
-granularity changes among variants 2--4.
+All methods use the same training and validation records, full mechanism-label
+availability, reliable-emission estimates, observation fields, fixed inference
+time, and paired test scenarios. Robust model hyperparameters and every
+temperature are selected by validation NLL only. Test data cannot affect model
+selection.
 
-This is a fully supervised structural ablation. It does not establish performance
-without mechanism labels. LM-RCL evidence addresses that separate question.
+This is a fully supervised structural comparison. It asks whether explicitly
+marginalizing two generation mechanisms adds value when information availability
+is matched. It does not establish performance without mechanism labels; the
+separate LM-RCL study addresses that question.
 
 ## Metrics and statistics
 
-Primary metrics are situation accuracy and hypothesis Brier score. NLL and ECE
-measure probability quality. Regret remains secondary because all methods in this
-comparison share the fixed commitment protocol, latency, and information cost.
+NLL and Brier score are the confirmatory probability-quality metrics. Accuracy
+provides a noninferiority guard and remains a key reported outcome. ECE and
+family-level results are descriptive.
 
-Test episodes are paired by training seed, family, hidden hypothesis, and scenario
-seed. Intervals use training-seed means as the independent unit. Test episodes are
-not treated as independent training replicates. Hyperparameters and temperatures
-may use training and validation data only.
+Test cases are paired by training seed, family, hidden hypothesis, and scenario
+seed. The independent statistical unit is the training seed. Episodes are never
+treated as independent training replicates. Formal intervals use paired seed
+means.
 
-## Development and formal stages
+## Evidence stages
 
-The development runner exists to detect implementation errors and estimate whether
-the global/source/source-region hierarchy is informative. Its results cannot be
-promoted to formal evidence. A formal protocol, method set, seed set, test draws,
-and decision rules will be frozen after development and before formal evaluation.
+The three-seed granularity, controlled heterogeneity, and robust-baseline runs are
+development evidence. They selected the global mixture and Huber primary
+comparator but cannot establish the final claim.
 
-## Planned later baselines
-
-After the granularity ablation: Student-t likelihood, reliability-weighted fusion,
-and Huber or trimmed robust fusion. Sensitivity studies follow only after the
-direct baselines are stable.
-
+The formal method set, ten fresh seeds, run size, metrics, confidence intervals,
+success rule, and stopping rule are frozen in
+`docs/formal_confirmation_protocol_v1.md`. Formal evaluation must write to a new
+directory and must not overwrite or pool development outputs.

@@ -67,3 +67,19 @@ predeclared development decision is therefore to use the global mixture as the
 main candidate and retain source-region prior granularity as an optional
 parameterization.
 
+## Mechanism baselines
+
+The matched development runner compares the global dual mixture with a single
+mechanism, Student-t, Huber, and reliability-weighted Gaussian fusion:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python \
+  -m experiments.run_rcl_mechanism_baselines
+```
+
+Results and the exact full-precision audit are documented in
+`docs/development_result_mechanism_baselines_v1.md` and
+`docs/heterogeneity_result_audit.md`. The formal protocol is frozen in
+`docs/formal_confirmation_protocol_v1.md`; its reserved entry point has not been
+run.
+
