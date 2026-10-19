@@ -1,0 +1,35 @@
+{
+  "decision": "NO-GO",
+  "primary_accuracy_comparisons": {
+    "standard_rcl": {
+      "method": "intent_coupled_shared_temperature",
+      "comparator": "standard_rcl",
+      "scope": "overall",
+      "metric": "correct_commitment",
+      "difference": 0.0023809523809523356,
+      "ci95_low": -0.006550639120978826,
+      "ci95_high": 0.011312543882883499
+    },
+    "surface_independent": {
+      "method": "intent_coupled_shared_temperature",
+      "comparator": "surface_independent",
+      "scope": "overall",
+      "metric": "correct_commitment",
+      "difference": 0.0038095238095237813,
+      "ci95_low": -0.0043866666666666325,
+      "ci95_high": 0.012005714285714196
+    }
+  },
+  "reverse_policy_shift_accuracy_delta_vs_standard": {
+    "method": "intent_coupled_shared_temperature",
+    "comparator": "standard_rcl",
+    "scope": "stress",
+    "metric": "correct_commitment",
+    "difference": -0.02166666666666665,
+    "ci95_low": -0.08036928829561185,
+    "ci95_high": 0.037035954962278544
+  },
+  "policy_independent_strategy_claim": false,
+  "new_innovation_claim_established": false,
+  "formal_results_replaced": false
+}

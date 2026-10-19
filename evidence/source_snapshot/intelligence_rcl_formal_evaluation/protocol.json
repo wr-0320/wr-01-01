@@ -1,0 +1,62 @@
+{
+  "protocol": "Frozen Fixed-Prior RCL Formal v1",
+  "training_seeds": [
+    3001,
+    3002,
+    3003,
+    3004,
+    3005
+  ],
+  "methods": [
+    "multi_source",
+    "ride_v1",
+    "rcl_fixed",
+    "bayesian_fusion",
+    "pomcp_like",
+    "active_inference",
+    "rule_active",
+    "single_mechanism"
+  ],
+  "families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "multi_source",
+    "delayed",
+    "switch",
+    "adaptive"
+  ],
+  "episodes_per_method_family_seed": 100,
+  "expected_evaluation_episodes": 28000,
+  "epochs": 8,
+  "hidden_size": 32,
+  "batch_size": 64,
+  "neural_train_episodes_per_hypothesis_family": 8,
+  "neural_validation_episodes_per_hypothesis_family": 3,
+  "likelihood_train_episodes_per_hypothesis_family": 10,
+  "likelihood_fit_families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "delayed_dev_onset2"
+  ],
+  "temperature_validation_cases_per_seen_family": 3,
+  "temperature_grid": {
+    "min": 0.1,
+    "max": 10.0,
+    "count": 101
+  },
+  "scale_floor": 0.08,
+  "fixed_prior_smoothing": "Beta(1,1)",
+  "fixed_commit_step": 4,
+  "max_cycles": 10,
+  "primary_comparison": "rcl_fixed minus multi_source",
+  "primary_support_rule": "paired seed 95% CI accuracy lower > 0; Brier lower; regret lower; cost and latency equal",
+  "mechanism_comparison": "rcl_fixed minus single_mechanism (diagnostic, no multiplicity correction)",
+  "interval_unit": "training seed; 95% t interval; df=4 for five seeds",
+  "held_out_meaning": "fresh train/calibration/scenario seeds; multi_source, switch, adaptive excluded from fit; family designs have been explored in development",
+  "formal_results_replaced": false,
+  "learned_reliability_used": false,
+  "optional_end_to_end_policy": "not included; no frozen trained policy available",
+  "smoke_only": false
+}

@@ -1,0 +1,19 @@
+{
+  "primary_claim_supported": true,
+  "rcl_vs_multisource_accuracy": {
+    "comparator": "multi_source",
+    "scope": "overall",
+    "metric": "correct_commitment",
+    "difference": 0.15171428571428572,
+    "ci95_low": 0.10630036353356309,
+    "ci95_high": 0.19712820789500834
+  },
+  "rcl_vs_single_mechanism_accuracy": {
+    "comparator": "single_mechanism",
+    "scope": "overall",
+    "metric": "correct_commitment",
+    "difference": 0.04114285714285715,
+    "ci95_low": 0.017971408814523138,
+    "ci95_high": 0.06431430547119116
+  }
+}

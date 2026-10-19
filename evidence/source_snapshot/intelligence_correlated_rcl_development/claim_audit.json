@@ -1,0 +1,16 @@
+{
+  "decision": "NO-GO",
+  "primary_accuracy_difference": {
+    "method": "correlated_shared_temperature",
+    "scope": "overall",
+    "metric": "correct_commitment",
+    "difference": 0.0042857142857143,
+    "ci95_low": -0.0018614285714287108,
+    "ci95_high": 0.01043285714285731
+  },
+  "primary_brier_difference": -0.008728657357468278,
+  "primary_regret_difference": -0.08142857142857185,
+  "offline_joint_label_nll_reduction": 0.5162137735982354,
+  "novel_method_claim_established": false,
+  "formal_results_replaced": false
+}

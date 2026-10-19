@@ -1,0 +1,49 @@
+{
+  "protocol": "Shared Regional Contamination Development v1",
+  "seeds": [
+    5101,
+    5102,
+    5103
+  ],
+  "families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "multi_source",
+    "delayed",
+    "switch",
+    "adaptive"
+  ],
+  "methods": [
+    "single_mechanism",
+    "independent_rcl",
+    "correlated_shared_temperature",
+    "correlated_calibrated"
+  ],
+  "episodes_per_seed_family_method": 100,
+  "expected_test_episodes": 8400,
+  "fitting_families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "delayed_dev_onset2"
+  ],
+  "dependency_label": "at least two sources targeted in the same region and report cycle; offline only",
+  "shared_emissions": true,
+  "identical_unconditional_cell_rates": true,
+  "primary_method": "correlated_shared_temperature",
+  "primary_gate": "paired accuracy lower CI > 0 and hypothesis Brier lower, regret lower, and joint-label NLL lower than independent RCL",
+  "secondary_practical_target": "at least 0.03 mean accuracy gain; not a gate chosen after test",
+  "dependency_strength": 1.0,
+  "marginal_projection": "c_s(z)=q_s+(z-pi)*a_s; positive slopes fitted from training labels and capped to legal probabilities",
+  "shared_temperature_for_primary": true,
+  "secondary_temperature": "separately calibrated on same seen-family validation cases",
+  "minimum_calibration_cases_per_seen_family": 12,
+  "horizon": 10,
+  "commit_step": 4,
+  "cross_region_dependency": false,
+  "temporal_dependency": false,
+  "novelty_claim_verified": false,
+  "no_test_tuning": true,
+  "smoke_only": false
+}

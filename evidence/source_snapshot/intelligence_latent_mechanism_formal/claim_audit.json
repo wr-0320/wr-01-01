@@ -1,0 +1,53 @@
+{
+  "formal_primary_supported": true,
+  "primary_noninferiority_margin": -0.02,
+  "lm_0_vs_supervised_accuracy": {
+    "method": "lm_rcl_0",
+    "comparator": "supervised_rcl_100",
+    "scope": "overall",
+    "metric": "correct_commitment",
+    "difference": -0.0032857142857142807,
+    "ci95_low": -0.008055645350975806,
+    "ci95_high": 0.0014842167795472445
+  },
+  "lm_0_vs_supervised_brier": {
+    "method": "lm_rcl_0",
+    "comparator": "supervised_rcl_100",
+    "scope": "overall",
+    "metric": "hypothesis_brier",
+    "difference": 0.006833443407512666,
+    "ci95_low": 0.0045543892239221315,
+    "ci95_high": 0.0091124975911032
+  },
+  "lm_0_vs_supervised_regret": {
+    "method": "lm_rcl_0",
+    "comparator": "supervised_rcl_100",
+    "scope": "overall",
+    "metric": "regret",
+    "difference": 0.06242857142857146,
+    "ci95_low": -0.02820011881139746,
+    "ci95_high": 0.1530572616685404
+  },
+  "lm_10_vs_sparse_10_accuracy": {
+    "method": "lm_rcl_10",
+    "comparator": "sparse_supervised_rcl_10",
+    "scope": "overall",
+    "metric": "correct_commitment",
+    "difference": 0.027000000000000003,
+    "ci95_low": 0.013059840363400507,
+    "ci95_high": 0.0409401596365995
+  },
+  "key_secondary_superiority_supported": true,
+  "family_accuracy_differences": {
+    "honest": -0.004999999999999982,
+    "concealment": 0.004999999999999993,
+    "decoy": -0.007999999999999997,
+    "multi_source": -0.0050000000000000044,
+    "delayed": 0.004999999999999993,
+    "switch": -0.014000000000000002,
+    "adaptive": -0.0010000000000000009
+  },
+  "equal_latency_and_information_cost": true,
+  "algorithm_novelty_established_by_experiment": false,
+  "older_formal_results_replaced": false
+}

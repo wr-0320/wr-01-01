@@ -1,0 +1,60 @@
+{
+  "protocol": "True/Induced Region Coupling Development v1",
+  "seeds": [
+    6101,
+    6102,
+    6103
+  ],
+  "fit_families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "delayed_dev_onset2"
+  ],
+  "primary_families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "multi_source",
+    "delayed",
+    "switch",
+    "adaptive"
+  ],
+  "separate_policy_shift_stress": [
+    "reversed_decoy",
+    "reversed_multi_source"
+  ],
+  "methods": [
+    "single_mechanism",
+    "standard_rcl",
+    "surface_independent",
+    "intent_coupled_shared_temperature",
+    "intent_coupled_calibrated"
+  ],
+  "episodes_per_method_family_seed": 100,
+  "expected_test_episodes": 13500,
+  "primary_model": "intent_coupled_shared_temperature",
+  "primary_controls": [
+    "standard_rcl",
+    "surface_independent"
+  ],
+  "primary_gate": "accuracy paired lower CI > 0 against both controls, and Brier/regret lower against both; task gains required, label fit alone insufficient",
+  "reliable_emissions_frozen_across_variants": true,
+  "cell_priors_frozen_across_variants": true,
+  "primary_temperature_shared_with_standard": true,
+  "transition_smoothing": 1.0,
+  "component_scale_floor": 0.08,
+  "surface_states": [
+    "decoy_north",
+    "decoy_central",
+    "decoy_south",
+    "concealment"
+  ],
+  "component_fit": "all observed cells during presentation-event cycles; not only targeted cells; unconditional-surface control uses identical components",
+  "hypothesis_coupling": "estimated from offline training H and effective-red-action-derived surface labels; never from test labels",
+  "caveat": "surface states encode induced region, not a full fictitious operational hypothesis; relationship can be red-policy specific",
+  "event_scope": "shared across cells within cycle; independent across cycles",
+  "validation_cases_per_seen_family": 12,
+  "no_test_tuning": true,
+  "smoke_only": false
+}

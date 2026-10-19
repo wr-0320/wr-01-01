@@ -1,0 +1,22 @@
+# Existing evidence, gaps, and reuse plan
+
+| Study | Existing evidence | Status for RCL paper | Reuse |
+|---|---|---|---|
+| Fixed-prior RCL | 5 seeds, 7 families, 8 methods, 28,000 episodes; RCL 81.9%; matched single mechanism 77.8% | Core prior evidence, but supervision and structural attribution remain incomplete | Reuse protocol, simulator, fit/calibration rules, paired scenario construction, and reporting code |
+| LM-RCL | 10 seeds, 49,000 episodes; 0%-label LM-RCL 81.9%, supervised RCL 82.2%; preregistered noninferiority supported | Supporting evidence about mechanism-label dependence, not the main method | Reuse as supervision-boundary evidence; do not pool estimates with the 5-seed study |
+| Correlation-aware RCL | 3 development seeds, 8,400 episodes; +0.43 pp, CI crosses zero; NO-GO | Boundary evidence; no positive method claim | Retain unchanged; later scan dependency strength instead of relabeling this result |
+| Intent-coupled RCL | 3 development seeds; +0.24 pp versus standard RCL, CI crosses zero; NO-GO | Boundary evidence for hypothesis-dependent contamination | Retain unchanged; use only to motivate limits or a predeclared later stress test |
+| Global mixture | Missing before this extraction | Highest-priority structural baseline | Implemented in this repository with matched emissions and supervision |
+| Source-level mixture | Missing before this extraction | Highest-priority structural baseline | Implemented in this repository with matched emissions and supervision |
+| Student-t likelihood | Missing | Direct robust-generative baseline | Implement after granularity smoke and development checks |
+| Reliability-weighted fusion | Existing related negative development uses a different learned attenuation setup | Needs a clean matched baseline | Implement after granularity comparison; do not reuse the old result as equivalent |
+| Huber/trimmed fusion | Missing | Robust-estimation baseline | Implement after granularity comparison |
+| Contamination-rate scan | Missing | Sensitivity gap | Single-factor scan after direct baselines |
+| Reliability-error scan | Missing | Sensitivity gap | Bias and random perturbation after direct baselines |
+| Correlation-strength scan | One fixed strength only | Sensitivity gap | Extend from independence to several frozen strengths |
+| Missingness/delay and distribution shift | Family-level variation exists, controlled scans do not | Robustness gap | Add only after the core comparison is frozen |
+
+Evidence snapshots are copied under `evidence/source_snapshot/`. They are historical
+inputs and must never be overwritten by new runs. New development output goes under
+`outputs/development/`; future formal output must use a new frozen directory.
+
