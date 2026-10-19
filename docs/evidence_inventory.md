@@ -8,6 +8,7 @@
 | Intent-coupled RCL | 3 development seeds; +0.24 pp versus standard RCL, CI crosses zero; NO-GO | Boundary evidence for hypothesis-dependent contamination | Retain unchanged; use only to motivate limits or a predeclared later stress test |
 | Global mixture | Missing before this extraction | Highest-priority structural baseline | Implemented in this repository with matched emissions and supervision |
 | Source-level mixture | Missing before this extraction | Highest-priority structural baseline | Implemented in this repository with matched emissions and supervision |
+| Controlled reliability heterogeneity | 3 development seeds, 4 matched profiles, 25,200 model-episode evaluations; actual cell-rate SD rose from 0.0155 to 0.0456 while overall test contamination stayed near 6% | Source-region prior showed no stable accuracy, Brier, or NLL advantage; predeclared decision favors global mixture as the main candidate | Retain as development evidence; do not claim equivalence and do not expand to formal seeds before freezing the revised mixture-likelihood claim |
 | Student-t likelihood | Missing | Direct robust-generative baseline | Implement after granularity smoke and development checks |
 | Reliability-weighted fusion | Existing related negative development uses a different learned attenuation setup | Needs a clean matched baseline | Implement after granularity comparison; do not reuse the old result as equivalent |
 | Huber/trimmed fusion | Missing | Robust-estimation baseline | Implement after granularity comparison |

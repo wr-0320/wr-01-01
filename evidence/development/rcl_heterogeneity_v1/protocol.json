@@ -1,0 +1,103 @@
+{
+  "protocol": "Controlled Source-Region Heterogeneity Development v1",
+  "status": "development_not_formal",
+  "profiles": {
+    "low": [
+      [
+        0.6,
+        0.6,
+        0.6
+      ],
+      [
+        0.6,
+        0.6,
+        0.6
+      ],
+      [
+        0.6,
+        0.6,
+        0.6
+      ]
+    ],
+    "medium": [
+      [
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        0.6,
+        0.6,
+        0.6
+      ],
+      [
+        0.9,
+        0.9,
+        0.9
+      ]
+    ],
+    "high": [
+      [
+        0.2,
+        0.6,
+        1.0
+      ],
+      [
+        0.6,
+        1.0,
+        0.2
+      ],
+      [
+        1.0,
+        0.2,
+        0.6
+      ]
+    ],
+    "extreme": [
+      [
+        0.02,
+        0.78,
+        1.0
+      ],
+      [
+        0.78,
+        1.0,
+        0.02
+      ],
+      [
+        1.0,
+        0.02,
+        0.78
+      ]
+    ]
+  },
+  "configured_activation_mean": 0.6,
+  "seeds": [
+    9201,
+    9202,
+    9203
+  ],
+  "families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "multi_source",
+    "delayed",
+    "switch",
+    "adaptive"
+  ],
+  "methods": [
+    "global_mixture",
+    "source_mixture",
+    "source_region_rcl"
+  ],
+  "episodes_per_method_family_profile_seed": 100,
+  "expected_test_episodes": 25200,
+  "paired_scenarios_across_methods_and_profiles": true,
+  "likelihood_episodes_per_hypothesis_family": 10,
+  "calibration_cases_per_seen_family": 3,
+  "fixed_commit_step": 4,
+  "interval_unit": "training seed",
+  "decision_rules": "docs/heterogeneity_scan_protocol.md",
+  "formal_claim_allowed": false
+}

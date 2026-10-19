@@ -1,0 +1,10 @@
+{
+  "decision": "global_mixture_main_source_region_optional",
+  "rule1_accuracy_positive_high_and_extreme": false,
+  "rule1_at_least_two_point_gain": false,
+  "rule1_probability_guard": true,
+  "rule2_source_medium_gain_at_least_two_points": false,
+  "rule3_probability_quality_only": false,
+  "all_methods_degrade_at_least_five_points": false,
+  "formal_claim_established": false
+}
