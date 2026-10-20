@@ -17,6 +17,10 @@ The independent-generator falsification follow-up is recorded in:
 - `experiments/jmid_v2/`;
 - `docs/development_result_jmid_v2.md`.
 
+The next experiment is design-only. Its dependency-graph uncertainty protocol
+is frozen in `docs/jmid_graph_uncertainty_protocol_v3.md`. No v3 implementation
+or result exists yet, and formal confirmation remains unauthorized.
+
 This stage uses a controlled binary simulator and four small empirical models.
 It is not a formal confirmation study or an algorithm novelty claim. The first
 result permits only an independently generated falsification study with a
