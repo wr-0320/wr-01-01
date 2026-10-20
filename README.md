@@ -87,6 +87,18 @@ current runtime has not retrieved the six paper bodies. The candidate is retaine
 for theory screening, while originality remains unconfirmed and prototype work
 remains prohibited.
 
+The bounded posterior-certificate theory package is recorded in:
+
+- `docs/dynamic_lineage_theory_protocol.md`;
+- `docs/dynamic_lineage_posterior_certificate_theorem.md`.
+
+It gives a finite-sample lineage confidence set, a set-valued posterior error
+certificate, a graph-radius-to-posterior-width bound, sufficient nonvacuity
+conditions and observational-equivalence counterexamples. The result is
+`CONDITIONAL THEORY-FEASIBLE / PROTOTYPE NO-GO`: its construction is currently a
+careful composition of known statistical tools rather than a confirmed original
+theorem. Online alarm development remains deferred.
+
 The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
 in `docs/jmid_prior_art_comparison.csv`. Its decision is a conditional GO for

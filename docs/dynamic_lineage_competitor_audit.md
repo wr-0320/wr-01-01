@@ -67,13 +67,12 @@ locally reproduced and no new implication has yet been proved.
 
 ## Next permitted work
 
-One minimal-theorem feasibility audit may begin only after either:
+The external audit has been accepted as a provisional evidence basis for one
+bounded mathematical-feasibility check, recorded in
+`dynamic_lineage_posterior_certificate_theorem.md`. This does not upgrade the
+literature rows to locally verified evidence or confirm novelty.
 
-1. the six original paper bodies are locally verified at theorem level; or
-2. the external audit is accepted explicitly as the evidence basis and its
-   exact source passages are archived.
-
-Until then, do not implement a lineage learner, online detector, fusion model or
-simulator. If local full-text access remains unavailable, preserve this outcome
-as `INCONCLUSIVE-BLOCKED` rather than treating the reported gap as confirmed
-novelty.
+Do not implement a lineage learner, online detector, fusion model or simulator.
+Originality remains `INCONCLUSIVE-BLOCKED` until the six paper bodies are
+verified, while the theorem package separately decides mathematical
+feasibility.
