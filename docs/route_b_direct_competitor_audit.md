@@ -124,3 +124,9 @@ that result with attribution, but cannot present it as new theory. The open
 step is to derive event-law separation from weaker operational structure rather
 than assume or measure the separation after the fact.
 
+The finite-alphabet candidate theorem additionally uses classical code-distance
+and binary-channel arguments. The full-text audit must check whether its event-
+class formulation adds anything beyond sparse fault isolability or secure state
+estimation. Until then, the theorem is evidence of internal consistency rather
+than evidence of novelty.
+

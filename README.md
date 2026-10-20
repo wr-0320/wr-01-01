@@ -15,6 +15,7 @@ and pre-implementation gates are in:
 - `docs/route_b_literature_scope.md`;
 - `docs/route_b_problem_formulation.md`;
 - `docs/route_b_identifiability_audit.md`;
+- `docs/route_b_finite_alphabet_theorem.md`;
 - `docs/route_b_direct_competitor_audit.md`;
 - `docs/route_b_go_no_go_protocol.md`.
 

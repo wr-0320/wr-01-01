@@ -212,6 +212,11 @@ The active theorem target and counterexamples are maintained in
 `route_b_identifiability_audit.md`. That audit supersedes any broader reading of
 the anchor/witness lemma above.
 
+The first complete finite-alphabet candidate theorem is in
+`route_b_finite_alphabet_theorem.md`. It is deliberately conditional on a known
+candidate boundary and identifiable prehistory and therefore does not yet solve
+the full online problem.
+
 ## Decisive experimental cases
 
 The future simulator protocol must manipulate exactly one factor at a time

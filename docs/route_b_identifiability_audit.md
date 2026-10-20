@@ -190,6 +190,14 @@ produces a nonzero lower bound on \(\delta_L\). It must also impose a minimum
 observable mechanism effect; otherwise mechanism-change detection remains
 impossible.
 
+A first binary finite-alphabet candidate theorem is now given in
+`route_b_finite_alphabet_theorem.md`. It derives event-center distance
+\(D=\min\{r,L(d-2k)\}\) and a uniform positive TV bound through an independent
+binary symmetric channel. The result is a feasibility theorem under strong
+conditions, not a novelty claim: it conditions on a candidate boundary and
+identifiable prehistory, uses persistent situations and assumes separated old
+and new mechanism-action classes.
+
 ## Revised theory target
 
 The desired chain is now explicit:

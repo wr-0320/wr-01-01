@@ -47,8 +47,12 @@ Current status: **PARTIAL, WITH A CORRECTED CLAIM**. The audit found that
 state-level emission injectivity does not imply event-level identifiability when
 events mix over successor paths. `route_b_identifiability_audit.md` now contains
 a finite-state counterexample, the correct event-law/convex-hull criterion, and
-an anchor-free sparse-source direction. A structural lower bound on finite-window
-event separation remains unproved.
+an anchor-free sparse-source direction. A binary finite-alphabet candidate
+theorem now derives a positive bound under a known candidate boundary,
+identifiable prehistory, persistent state, separated sparse mechanism-action
+classes and independent bit noise. Gate 2 remains open because these assumptions
+are strong, the theorem's ingredients are classical, and its relationship to
+fault-isolation and secure-estimation results is not yet resolved.
 
 ## Gate 3: simulator validity
 
@@ -117,6 +121,9 @@ environment.
 
 Do not implement D-MIR yet. Complete the fault-isolation and secure-estimation
 parts of Gate 1, then prove a useful finite-window event-separation result for
-Gate 2. State-identification results alone do not pass the gate. RCL remains a
-frozen baseline and evidence source; protocol v1 must not be rerun or modified.
+Gate 2 with uncertain boundary/prehistory or an equally operational extension.
+The current finite-alphabet theorem is a feasibility result, not sufficient
+authorization for implementation. State-identification results alone do not
+pass the gate. RCL remains a frozen baseline and evidence source; protocol v1
+must not be rerun or modified.
 
