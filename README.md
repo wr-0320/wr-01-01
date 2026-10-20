@@ -72,6 +72,21 @@ auditable threat class is therefore required. Originality remains
 `INCONCLUSIVE-BLOCKED` until the 15 frozen primary works can be checked from
 full text, so no algorithm or experiment is authorized.
 
+The sole subsequent candidate is reliable situation inference under unknown,
+dynamic evidence lineage. Its closest-work comparison is frozen in:
+
+- `docs/dynamic_lineage_competitor_audit_protocol.md`;
+- `docs/dynamic_lineage_competitor_matrix.csv`;
+- `docs/dynamic_lineage_competitor_audit.md`.
+
+The supplied theorem audit reports that dynamic truth discovery, copy-aware
+truth discovery, known-topology deduplication, multi-source conformal inference,
+online PAC-Bayes certificates and anytime failure detection each cover only part
+of the target. Those findings are recorded as `externally_reported`, because the
+current runtime has not retrieved the six paper bodies. The candidate is retained
+for theory screening, while originality remains unconfirmed and prototype work
+remains prohibited.
+
 The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
 in `docs/jmid_prior_art_comparison.csv`. Its decision is a conditional GO for
