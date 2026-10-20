@@ -111,6 +111,63 @@ def sharp_likelihood_ratio_bounds(
     return result
 
 
+def operational_likelihood_ratio_envelope(
+    compatible_raw_reports: tuple[tuple[int, ...], ...],
+    source_marginal_likelihood_ratios: tuple[Mapping[int, Fraction], ...],
+    gamma_censor: Fraction,
+    gamma_dependence: Fraction,
+    gamma_transport: Fraction,
+) -> tuple[Fraction, Fraction]:
+    """Convert operational multiplicative constraints into an observed LR bound.
+
+    Each gamma is at least one. The theorem assumes per-source mask kernels,
+    a bounded joint/product density ratio, and bounded class-conditional
+    source-to-target marginal density ratios. See the accompanying audit for
+    the exact information boundary.
+    """
+    source_count = len(source_marginal_likelihood_ratios)
+    if source_count == 0:
+        raise ValueError("at least one source is required")
+    if any(len(report) != source_count for report in compatible_raw_reports):
+        raise ValueError("every raw report must have one value per source")
+    if not compatible_raw_reports:
+        raise ValueError("the observed outcome needs at least one compatible raw report")
+    if min(gamma_censor, gamma_dependence, gamma_transport) < 1:
+        raise ValueError("multiplicative sensitivity parameters must be at least one")
+
+    source_products = []
+    for report in compatible_raw_reports:
+        product = F(1)
+        for source, value in enumerate(report):
+            try:
+                ratio = source_marginal_likelihood_ratios[source][value]
+            except KeyError as error:
+                raise ValueError("missing source likelihood ratio") from error
+            if ratio <= 0:
+                raise ValueError("source likelihood ratios must be positive")
+            product *= ratio
+        source_products.append(product)
+
+    amplification = (
+        gamma_censor ** source_count
+        * gamma_dependence ** 2
+        * gamma_transport ** (2 * source_count)
+    )
+    return min(source_products) / amplification, max(source_products) * amplification
+
+
+def posterior_interval_from_lr(
+    prior: Fraction, likelihood_ratio_interval: tuple[Fraction, Fraction]
+) -> tuple[Fraction, Fraction]:
+    lower, upper = likelihood_ratio_interval
+    if not F(0) < prior < F(1) or lower < 0 or upper < lower:
+        raise ValueError("invalid prior or likelihood-ratio interval")
+    return (
+        _posterior_from_likelihood_ratio(prior, lower),
+        _posterior_from_likelihood_ratio(prior, upper),
+    )
+
+
 def exact_witness() -> dict[str, object]:
     """Return the exact facts used in the accompanying theorem note."""
     return {

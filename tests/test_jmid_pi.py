@@ -6,6 +6,8 @@ from experiments.jmid_pi.verification import (
     MODEL_A,
     MODEL_B,
     exact_witness,
+    operational_likelihood_ratio_envelope,
+    posterior_interval_from_lr,
     sharp_likelihood_ratio_bounds,
 )
 
@@ -53,3 +55,33 @@ def test_sharp_bounds_reject_infeasible_envelopes():
             F(3, 4),
             {"a": (F(0), F(1, 3)), "b": (F(0), F(1, 3))},
         )
+
+
+def test_operational_constraints_give_a_nontrivial_strict_envelope():
+    # The first source is visibly 1; the second source is missing and may be 0
+    # or 1. Ratios come from a labeled source environment.
+    compatible = ((1, 0), (1, 1))
+    source_ratios = ({0: F(2, 3), 1: F(3, 2)}, {0: F(4, 5), 1: F(5, 4)})
+    envelope = operational_likelihood_ratio_envelope(
+        compatible,
+        source_ratios,
+        gamma_censor=F(10, 9),
+        gamma_dependence=F(10, 9),
+        gamma_transport=F(21, 20),
+    )
+    amplification = F(2401, 1296)
+    assert envelope == (F(6, 5) / amplification, F(15, 8) * amplification)
+    posterior = posterior_interval_from_lr(F(1, 5), envelope)
+    assert F(0) < posterior[0] < posterior[1] < F(1)
+    assert float(posterior[1] - posterior[0]) < 0.35
+
+
+def test_operational_envelope_collapses_when_all_constraints_are_exact():
+    envelope = operational_likelihood_ratio_envelope(
+        ((1,),),
+        ({1: F(7, 3)},),
+        gamma_censor=F(1),
+        gamma_dependence=F(1),
+        gamma_transport=F(1),
+    )
+    assert envelope == (F(7, 3), F(7, 3))

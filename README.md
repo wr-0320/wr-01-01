@@ -43,8 +43,18 @@ It separates target-supervised identification from unlabeled-target and
 transport settings, gives an exact MNAR/dependent-evidence nonidentifiability
 witness, and derives sharp finite-alphabet bounds under likelihood-ratio
 envelopes. These are baseline results rather than a novelty claim. Further work
-is limited to determining whether operational censorship and provenance
+was limited to determining whether operational censorship and provenance
 constraints imply a nonvacuous likelihood-ratio envelope.
+
+That final feasibility audit is complete in
+`docs/jmid_pi_operational_bound_audit.md`. Finite censorship, dependence and
+transport factors do imply a strict bound when labeled source information
+anchors the class signal. The bound depends on externally calibrated sensitivity
+constants and expands exponentially with source count. JMID-PI is therefore
+retained only as conditional sensitivity analysis; further theorem expansion,
+algorithm development and formal experiments are stopped. The next candidate
+direction is deception-risk-aware selective inference, pending a separate
+bounded audit.
 
 The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
