@@ -262,10 +262,12 @@ The main mathematical target is feasible:
   counterexamples are available.
 
 The originality gate is not passed. The current certificate is a disciplined
-composition of existing statistical tools. A publishable increment would need
-a sharper result that obtains a small posterior radius without full graph
-recovery, or a minimax lower/upper bound showing that the proposed radius is
-optimal under operational lineage signals.
+composition of existing statistical tools. A final targeted audit asked whether
+posterior-relevant graph equivalence classes could provide a tighter interval
+without full graph recovery; `dynamic_lineage_target_equivalence_result.md`
+shows that quotienting alone preserves the exact posterior image. Strict
+tightening requires additional identifying information or a separately valid,
+more efficient functional confidence procedure.
 
 Accordingly, the outcome is **CONDITIONAL THEORY-FEASIBLE / PROTOTYPE NO-GO**.
 Anytime alarms remain deferred. No model implementation or simulation is

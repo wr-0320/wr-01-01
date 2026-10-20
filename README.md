@@ -99,6 +99,20 @@ conditions and observational-equivalence counterexamples. The result is
 careful composition of known statistical tools rather than a confirmed original
 theorem. Online alarm development remains deferred.
 
+The one permitted target-equivalence breakthrough audit is complete in:
+
+- `docs/dynamic_lineage_target_equivalence_protocol.md`;
+- `docs/dynamic_lineage_target_equivalence_result.md`.
+
+Its core result is negative: merging graphs that imply the same target posterior
+cannot tighten the exact complete-graph posterior envelope. A strictly narrower
+valid interval must exclude a posterior-distinct class using additional
+identifying information or a separately justified functional test. This is a
+standard projection/partial-identification principle, so target-relevant graph
+equivalence is stopped as the core algorithmic novelty. The conditional
+certificate and impossibility boundary are retained; prototype work remains
+prohibited.
+
 The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
 in `docs/jmid_prior_art_comparison.csv`. Its decision is a conditional GO for
