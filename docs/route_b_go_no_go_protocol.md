@@ -54,6 +54,13 @@ classes and independent bit noise. Gate 2 remains open because these assumptions
 are strong, the theorem's ingredients are classical, and its relationship to
 fault-isolation and secure-estimation results is not yet resolved.
 
+The subsequent joint-window theorem also handles an unknown boundary and
+unknown pre-state under a known clean parity constraint, a single synchronous
+change, a two-sided guard window and repeated observable syndrome activation.
+This removes two earlier oracle conditions but introduces a structured-residual
+assumption that may already be covered by fault-isolation theory. It therefore
+does not close Gate 2.
+
 ## Gate 3: simulator validity
 
 Freeze a minimal simulator before algorithm tuning. It must contain the four
@@ -122,8 +129,9 @@ environment.
 Do not implement D-MIR yet. Complete the fault-isolation and secure-estimation
 parts of Gate 1, then prove a useful finite-window event-separation result for
 Gate 2 with uncertain boundary/prehistory or an equally operational extension.
-The current finite-alphabet theorem is a feasibility result, not sufficient
-authorization for implementation. State-identification results alone do not
-pass the gate. RCL remains a frozen baseline and evidence source; protocol v1
-must not be rerun or modified.
+The joint-window syndrome theorem supplies one such extension, but it still
+requires full prior-art comparison and relaxation of its known-constraint,
+clean-baseline and synchronous-change assumptions. It is not sufficient
+authorization for implementation. RCL remains a frozen baseline and evidence
+source; protocol v1 must not be rerun or modified.
 

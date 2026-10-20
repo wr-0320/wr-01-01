@@ -217,6 +217,12 @@ The first complete finite-alphabet candidate theorem is in
 candidate boundary and identifiable prehistory and therefore does not yet solve
 the full online problem.
 
+`route_b_joint_window_theorem.md` removes those two conditions in a more
+restricted cross-source model: the unknown boundary and pre-state are unioned
+inside each event class, while a known parity constraint provides a noisy,
+report-computable mechanism witness. This remains a fault-isolation-like
+feasibility result rather than an established novel contribution.
+
 ## Decisive experimental cases
 
 The future simulator protocol must manipulate exactly one factor at a time

@@ -198,6 +198,13 @@ conditions, not a novelty claim: it conditions on a candidate boundary and
 identifiable prehistory, uses persistent situations and assumes separated old
 and new mechanism-action classes.
 
+`route_b_joint_window_theorem.md` next unions over unknown boundaries and
+unknown pre-states. A known cross-source parity constraint and at least
+\(\ell\) syndrome-active times yield
+\(D_{\mathrm{joint}}=\min\{\ell,q(d-2k)\}\). This is closer to the target
+information boundary, but its structured residual is also much closer to
+classical fault isolation.
+
 ## Revised theory target
 
 The desired chain is now explicit:

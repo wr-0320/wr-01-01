@@ -130,3 +130,10 @@ class formulation adds anything beyond sparse fault isolability or secure state
 estimation. Until then, the theorem is evidence of internal consistency rather
 than evidence of novelty.
 
+The joint-window theorem heightens this collision risk: its parity syndrome is
+a structured residual, and its four event classes resemble process-change and
+sensor-fault isolation. The direct audit must compare event isolability with
+unknown fault time, sparse sensor faults, residual signatures and simultaneous
+process/sensor changes. A different application vocabulary would not be a
+theoretical increment.
+
