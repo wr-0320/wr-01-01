@@ -69,9 +69,11 @@ The four event-center sets are
 \end{aligned}
 \]
 
-The attacker and transition model may randomize over any center within the
-appropriate set. They must choose non-anticipatively: they cannot observe future
-measurement-noise bits before choosing the attack path.
+For the inverse-channel result below, the attacker and transition model may
+randomize over any center within the appropriate set, but the complete center
+path is selected independently of the ordinary measurement noise. This is the
+open-loop information structure I0 in `route_b_adaptive_attack_audit.md`.
+Causal adaptation to past noisy reports requires a separate bound.
 
 Finally, each of the \(n=SL\) bits passes independently through a binary
 symmetric channel with crossover probability \(0\le\eta<1/2\). Write
@@ -264,11 +266,15 @@ most the new composite state. Event attribution requires a sufficiently
 identified pre-boundary state/class or a joint theorem that includes the
 pre-boundary window.
 
-### 6. Allow the attacker to anticipate measurement noise
+### 6. Allow the attacker to control the observation channel
 
-An attacker that sees future channel flips can choose masks that cancel or mimic
-them, invalidating both the binomial error calculation and the fixed-channel
-inverse argument. The theorem requires non-anticipating manipulation.
+If the attacker changes the noise law, selectively censors reports based on
+realized noise, or violates the event-center constraints on selected histories,
+the BSC inverse and binomial calculations no longer describe the observation
+process. Dependence of a center path on noise is more subtle: it invalidates the
+fixed-mixture inverse proof, but it does not invalidate the pathwise
+nearest-event-set bound when additive exogenous noise and event membership still
+hold. See `route_b_adaptive_attack_audit.md`.
 
 ## What this theorem does and does not contribute
 
@@ -283,8 +289,8 @@ must not be presented as new. The useful result of this audit is narrower:
   change;
 - it exposes the strong assumptions still hidden by the simplified theorem:
   a known candidate boundary, identifiable prehistory, persistent situation,
-  binary XOR manipulation, separated mechanism-action classes and independent
-  noise.
+  binary XOR manipulation, separated mechanism-action classes, independent
+  noise and noise-independent center-path selection for the inverse bound.
 
 The next theoretical question is whether event separation can be retained when
 the boundary and pre-state are uncertain and when mechanism effects are defined

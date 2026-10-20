@@ -223,6 +223,11 @@ inside each event class, while a known parity constraint provides a noisy,
 report-computable mechanism witness. This remains a fault-isolation-like
 feasibility result rather than an established novel contribution.
 
+`route_b_adaptive_attack_audit.md` distinguishes open-loop attack-path mixtures
+from attacks adapted to past noisy observations. The latter invalidate the
+fixed-mixture inverse-channel proof but preserve a pathwise decoder bound under
+exogenous additive noise and almost-sure event constraints.
+
 ## Decisive experimental cases
 
 The future simulator protocol must manipulate exactly one factor at a time

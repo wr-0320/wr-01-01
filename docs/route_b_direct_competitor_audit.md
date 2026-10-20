@@ -137,3 +137,9 @@ unknown fault time, sparse sensor faults, residual signatures and simultaneous
 process/sensor changes. A different application vocabulary would not be a
 theoretical increment.
 
+The current theorem-level mapping and paper decision are recorded in
+`route_b_fault_isolation_audit.md`. Its preliminary verdict is that the syndrome
+theorem is too close to parity-space residual and sparse fault-isolation theory
+to support an independent contribution without an uncovered adaptive,
+probabilistic or refusal guarantee.
+

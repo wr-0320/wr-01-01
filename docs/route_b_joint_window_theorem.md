@@ -62,8 +62,7 @@ so at least \(q\ge1\) samples occur on both sides. The pre-boundary situation
 \(z_1\ne z_0\) persists from \(\tau+1\) through the end of the window.
 
 The continuing mechanism produces clean codewords before ordinary measurement
-noise. A changed mechanism applies a non-anticipating mask \(a_t\) after
-\(\tau\), with
+noise. A changed mechanism applies a mask \(a_t\) after \(\tau\), with
 
 \[
 \lVert a_t\rVert_0\le k.
@@ -184,13 +183,16 @@ The proof does not estimate \(\tau\) or \(z_0\). It shows that marginalizing or
 randomizing over all their admissible values cannot make the noiseless event
 supports overlap.
 
-## Theorem 1: positive joint-window distribution separation
+## Theorem 1: joint-window distribution separation
 
-Let each of the \(ST\) center bits pass independently through a binary symmetric
-channel with \(0\le\eta<1/2\). For event \(h\), let
-\(\mathcal P_h^{(T)}\) contain the resulting observation law for every
-probability mixture over \(\mathcal J_h^{(T)}\). Under the assumptions of
-Lemma 2,
+The information structures I0 and I1 are defined and audited in
+`route_b_adaptive_attack_audit.md`.
+
+Let each of the \(ST\) center bits be subject to exogenous independent binary
+noise with \(0\le\eta<1/2\). Under I0, the complete center path is selected
+independently of this noise; \(\mathcal P_h^{(T)}\) then contains
+\(K_\eta\mu\) for every mixture \(\mu\) over
+\(\mathcal J_h^{(T)}\). Under the assumptions of Lemma 2,
 
 \[
 \delta_T^{\mathrm{joint}}=
@@ -223,9 +225,26 @@ The invertible-channel and nearest-event-set arguments from
 `route_b_finite_alphabet_theorem.md` apply with \(L\) replaced by \(T\) and
 \(D\) by \(D_{\mathrm{joint}}\). \(\square\)
 
-This theorem handles arbitrary mixing over unknown boundaries, states and
-non-anticipating sparse attack paths. It does not claim that the displayed bound
-is large enough for useful finite-sample inference.
+Under I1, an attacker may choose each mask from past noisy observations. The
+final center path is then dependent on earlier noise, so the inverse-channel
+term \((1-2\eta)^{ST}\) is not established. The pathwise decoder proof still
+gives
+
+\[
+\delta_{T,\mathrm{I1}}^{\mathrm{joint}}
+\ge 1-2\Pr\!\left[B\ge
+\left\lceil D_{\mathrm{joint}}/2\right\rceil\right].
+\]
+
+This is a positive certificate only when the binomial tail is below \(1/2\).
+The proof and filtration assumptions are audited in
+`route_b_adaptive_attack_audit.md`.
+
+Thus the theorem handles arbitrary open-loop mixtures over unknown boundaries,
+states and sparse attack paths. Its distance-sensitive part additionally
+handles causal observation-adaptive paths whose structural constraints hold
+almost surely. It does not claim that either bound is large enough for useful
+finite-sample inference.
 
 ## Assumption-deletion counterexamples
 
@@ -295,6 +314,8 @@ The remaining assumptions are substantial:
 - a changed mechanism violates the constraint at least \(\ell\) times;
 - there is at most one synchronous boundary with a two-sided guard;
 - reports use binary XOR corruption and independent bit noise.
+- the automatically positive inverse-channel bound uses noise-independent path
+  selection; causal adaptation retains only the audited decoder bound.
 
 Coding theory, parity-based fault detection and sparse secure estimation already
 contain closely related ingredients. The candidate increment, if any, would

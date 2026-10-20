@@ -196,7 +196,10 @@ A first binary finite-alphabet candidate theorem is now given in
 binary symmetric channel. The result is a feasibility theorem under strong
 conditions, not a novelty claim: it conditions on a candidate boundary and
 identifiable prehistory, uses persistent situations and assumes separated old
-and new mechanism-action classes.
+and new mechanism-action classes. Its automatically positive inverse-channel
+bound additionally assumes that the complete center path is selected
+independently of measurement noise; under causal observation-adaptive attacks,
+only the audited distance-sensitive decoder bound currently remains.
 
 `route_b_joint_window_theorem.md` next unions over unknown boundaries and
 unknown pre-states. A known cross-source parity constraint and at least

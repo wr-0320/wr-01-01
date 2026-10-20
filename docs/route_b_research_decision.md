@@ -55,3 +55,8 @@ mixtures over change-event paths are distinct. See
 `route_b_identifiability_audit.md`. The active target is now a structural lower
 bound on finite-window event separation, not state-level injectivity alone.
 
+The later adaptive-attack audit corrected the probability scope again:
+observation-adaptive paths cannot automatically use the fixed-channel inverse
+bound. This correction and the close mapping to parity-space fault isolation
+keep algorithm development at NO-GO.
+

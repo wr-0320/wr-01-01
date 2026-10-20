@@ -61,6 +61,13 @@ This removes two earlier oracle conditions but introduces a structured-residual
 assumption that may already be covered by fault-isolation theory. It therefore
 does not close Gate 2.
 
+The adaptive-attack audit further narrows the probability claim. Causal
+dependence on past noisy reports invalidates the fixed-mixture inverse-channel
+proof but preserves the nearest-event-set bound pathwise. A positive adaptive
+certificate currently requires the corresponding binomial tail to be below
+\(1/2\). The fault-isolation audit rates the independent theoretical
+contribution `INSUFFICIENT / UNRESOLVED`.
+
 ## Gate 3: simulator validity
 
 Freeze a minimal simulator before algorithm tuning. It must contain the four
@@ -127,11 +134,10 @@ environment.
 ## Immediate decision
 
 Do not implement D-MIR yet. Complete the fault-isolation and secure-estimation
-parts of Gate 1, then prove a useful finite-window event-separation result for
-Gate 2 with uncertain boundary/prehistory or an equally operational extension.
-The joint-window syndrome theorem supplies one such extension, but it still
-requires full prior-art comparison and relaxation of its known-constraint,
-clean-baseline and synchronous-change assumptions. It is not sufficient
+parts of Gate 1 before adding further theorem variants. The joint-window
+syndrome theorem already supplies an uncertain-boundary/prehistory feasibility
+result, but the adaptive audit narrowed its probability guarantee and the fault-
+isolation mapping raises a direct novelty collision. It is not sufficient
 authorization for implementation. RCL remains a frozen baseline and evidence
 source; protocol v1 must not be rerun or modified.
 
