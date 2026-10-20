@@ -14,6 +14,8 @@ and pre-implementation gates are in:
 - `docs/route_b_research_decision.md`;
 - `docs/route_b_literature_scope.md`;
 - `docs/route_b_problem_formulation.md`;
+- `docs/route_b_identifiability_audit.md`;
+- `docs/route_b_direct_competitor_audit.md`;
 - `docs/route_b_go_no_go_protocol.md`.
 
 Historical evidence copied from the source project is read-only context under

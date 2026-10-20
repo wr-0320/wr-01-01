@@ -49,3 +49,9 @@ identification problem is resolved.
 
 No route-B experiment code should be added before that decision.
 
+The first event-level audit corrected an overreach in the initial
+anchor/witness lemma: distinct composite-state emissions do not guarantee that
+mixtures over change-event paths are distinct. See
+`route_b_identifiability_audit.md`. The active target is now a structural lower
+bound on finite-window event separation, not state-level injectivity alone.
+

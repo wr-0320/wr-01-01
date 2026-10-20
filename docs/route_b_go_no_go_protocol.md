@@ -43,11 +43,12 @@ not merely posterior entropy under a renamed composite HMM.
 **NO-GO** if identification requires direct access to the true mechanism label,
 the hidden situation, or an oracle channel unavailable at inference time.
 
-Current status: **PARTIAL**. The equal-block-law impossibility construction, a
-restricted anchor/witness identification lemma and a robust-separation
-diagnostic are drafted. They still require literature comparison and proof
-review, and the anchor assumption likely needs to be weakened before it can
-support a journal contribution.
+Current status: **PARTIAL, WITH A CORRECTED CLAIM**. The audit found that
+state-level emission injectivity does not imply event-level identifiability when
+events mix over successor paths. `route_b_identifiability_audit.md` now contains
+a finite-state counterexample, the correct event-law/convex-hull criterion, and
+an anchor-free sparse-source direction. A structural lower bound on finite-window
+event separation remains unproved.
 
 ## Gate 3: simulator validity
 
@@ -114,7 +115,8 @@ environment.
 
 ## Immediate decision
 
-Do not implement D-MIR yet. Complete Gate 1 and the sufficient-condition part of
-Gate 2 first. RCL remains a frozen baseline and evidence source; protocol v1
-must not be rerun or modified.
+Do not implement D-MIR yet. Complete the fault-isolation and secure-estimation
+parts of Gate 1, then prove a useful finite-window event-separation result for
+Gate 2. State-identification results alone do not pass the gate. RCL remains a
+frozen baseline and evidence source; protocol v1 must not be rerun or modified.
 

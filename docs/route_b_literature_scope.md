@@ -41,6 +41,7 @@ attribute changes correctly.
 | Interacting multiple-model and adaptive filtering | Tracks changes among a known bank of motion/noise models | Usually assumes a specified model bank and treats model switches as dynamics; attribution under strategic, observation-only manipulation is not its main target | IMM or a finite model-bank Bayesian filter when compatible with the simulator |
 | Robust filtering and heavy-tailed likelihoods | Limits the influence of outliers and distributional contamination | Downweighting can preserve state estimates without detecting a persistent, strategic change or explaining its source | Huber, Student-t and the archived RCL |
 | Secure/resilient state estimation | Gives recovery conditions under sparse or bounded sensor attacks, often using known plant dynamics and attack sparsity | This is the closest theoretical neighbor, but recovery of the physical state is different from online posterior attribution between a physical transition and an emission-regime transition | A sparse-attack resilient estimator when its assumptions can be represented fairly |
+| Fault detection and isolation | Uses structured residuals, unknown-input observers or model banks to isolate process, actuator and sensor faults | It may already address much of the state-change-versus-observation-change distinction; strategic event mixtures and evidence-based refusal must be checked directly | Closest process-fault versus sensor-fault isolation method |
 | Adversarial HMM inference | Studies how corrupted observations manipulate hidden-state inference | Demonstrating or optimizing an attack does not necessarily solve online change attribution or calibrated refusal | The closest reproducible adversarial-HMM method found in the full-text review |
 | Latent-model identifiability | Gives conditions such as full-rank transitions and linearly independent emissions for parameter recovery, often up to label permutation | Global parameter identifiability does not imply that a finite online observation block uniquely identifies which latent factor changed | Use these results to state assumptions; do not present standard HMM identifiability as a new theorem |
 | Selective prediction and reject options | Permits abstention when predictive risk is high | Predictive entropy alone need not measure confusion between the two causal explanations | Entropy/confidence abstention baseline at matched coverage |
@@ -82,6 +83,15 @@ access cannot silently turn a search lead into evidence of novelty.
    models*, Biometrika, 103(2), 423–434.
 10. Chow, C. K. (1970), *On optimum recognition error and reject tradeoff*,
     IEEE Transactions on Information Theory, 16(1), 41–46.
+11. Chen, J. and Patton, R. J. (1999), *Robust Model-Based Fault Diagnosis
+    for Dynamic Systems*, Kluwer Academic Publishers.
+12. Blanke, M., Kinnaert, M., Lunze, J. and Staroswiecki, M. (2006),
+    *Diagnosis and Fault-Tolerant Control*, 2nd edition, Springer.
+13. Ding, S. X. (2008), *Model-based Fault Diagnosis Techniques: Design
+    Schemes, Algorithms, and Tools*, Springer.
+14. Pasqualetti, F., Doerfler, F. and Bullo, F. (2013), *Attack Detection
+    and Identification in Cyber-Physical Systems*, IEEE Transactions on
+    Automatic Control, 58(11), 2715–2729.
 
 These references establish neighboring methods and standard limits. They do not
 establish that no direct solution to the proposed problem exists.
@@ -97,6 +107,8 @@ establish that no direct solution to the proposed problem exists.
   systems.
 - Multi-sensor fault isolation methods that explicitly separate process changes
   from sensor-model changes.
+- Unknown-input observers and multiple-model methods for process-fault versus
+  sensor-fault isolation.
 
 No novelty sentence may cite a lead from this second list until its full text and
 closest references have been reviewed.
@@ -118,6 +130,10 @@ following query families:
 5. `(Byzantine OR compromised sensor) AND "quickest change detection"`
 6. `("strategic deception" OR "adversarial observation") AND (belief OR
    posterior) AND abstain`
+7. `("fault isolability" OR "structured residual") AND (sensor fault AND
+   process fault)`
+8. `("unknown input observer" OR "multiple model fault diagnosis") AND
+   isolation`
 
 For every plausible direct competitor, record its hidden variables, transition
 assumptions, attack knowledge, trusted-source assumptions, online outputs,

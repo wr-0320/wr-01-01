@@ -116,11 +116,12 @@ their present form. The theory phase must determine a minimal set and prove the
 corresponding identification result, preferably first for a finite-state,
 finite-alphabet model.
 
-## A restricted identification lemma
+## A restricted state-identification lemma
 
-The following elementary result shows that the problem can be identifiable
-under an explicit information boundary. It is a design sanity check, not yet a
-novel theoretical contribution.
+The following elementary result shows that the composite state can be
+identifiable under an explicit information boundary. It is a design sanity
+check, not an event-identification theorem and not a novel theoretical
+contribution.
 
 Assume two conditionally independent observed views \(A_t,B_t\). Their emission
 law is
@@ -139,16 +140,20 @@ Suppose:
 Then the mapping \((z,m)\mapsto p(A,B\mid z,m)\) is injective. If two pairs
 have different \(z\), their \(A\) marginals differ. If they have the same
 \(z\) but different \(m\), their conditional \(B\) laws differ. Therefore,
-given the pre-change pair and transition support that defines a change as moving
-to a different value, the four event families \(H_0,H_Z,H_M,H_{ZM}\) have
-distinct distributions.
+when each event has one known successor pair, the four events have distinct
+distributions.
 
 This is distributional identifiability, not perfect classification from one
 sample. Overlapping distributions still impose nonzero finite-sample error.
+More importantly, the conclusion does not extend automatically to stochastic
+events that mix over several successor states or paths: different mixtures of
+distinct emissions can be equal. The counterexample and corrected event-level
+convex-hull criterion are in `route_b_identifiability_audit.md`.
+
 The anchor assumption may also be too strong for strategic intelligence. A
-worthwhile theorem must weaken it, for example to a majority, sparse attack
-surface, intermittent verified channel or active verification condition, and
-must state the required observation length.
+worthwhile theorem must weaken it, for example to cross-source redundancy,
+sparse attack surfaces, an intermittent verified channel or active verification,
+and must state the required observation length.
 
 ## Confusability and abstention under model uncertainty
 
@@ -202,6 +207,10 @@ standard BOCPD or factorial-HMM filtering:
 
 If the only implementable method is a standard switching model with renamed
 states, the theoretical route is NO-GO.
+
+The active theorem target and counterexamples are maintained in
+`route_b_identifiability_audit.md`. That audit supersedes any broader reading of
+the anchor/witness lemma above.
 
 ## Decisive experimental cases
 
