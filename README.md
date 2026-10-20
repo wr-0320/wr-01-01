@@ -21,6 +21,12 @@ The next experiment is design-only. Its dependency-graph uncertainty protocol
 is frozen in `docs/jmid_graph_uncertainty_protocol_v3.md`. No v3 implementation
 or result exists yet, and formal confirmation remains unauthorized.
 
+The pre-v3 research-value audit is in
+`docs/jmid_research_value_review.md`, with a machine-readable comparison table
+in `docs/jmid_prior_art_comparison.csv`. Its decision is a conditional GO for
+one bounded v3 diagnostic and a NO-GO for formal evaluation or an algorithm
+novelty claim.
+
 This stage uses a controlled binary simulator and four small empirical models.
 It is not a formal confirmation study or an algorithm novelty claim. The first
 result permits only an independently generated falsification study with a

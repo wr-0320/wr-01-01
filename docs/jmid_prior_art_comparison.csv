@@ -1,0 +1,11 @@
+method_family,informative_missingness,evidence_dependence,graph_uncertainty,closest_jmid_overlap,unverified_increment,verification_status
+selection_pattern_mixture_shared_parameter,native,possible_with_joint_outcome_or_latent_effects,usually_prespecified,"M2/M4 discrete observed-data likelihood","strategic censorship plus unknown provenance may require partial identification",conceptual_only_fulltext_required
+bayesian_network_structural_em,latent_or_missing_data_likelihood,native,structure_learning,"Learned-Graph M4 finite special case","nonignorable missingness may invalidate ordinary structure scores",conceptual_only_fulltext_required
+chow_liu_forest_learning,not_inherently_nonignorable,tree_or_forest_native,selects_structure,"v3 matching search is a restricted graph learner","recovery under MNAR censorship and provenance constraints",conceptual_only_fulltext_required
+bayesian_model_averaging,component_specific,native_in_components,native,"Graph-Averaged M4 predictive weighting","weight reliability under joint graph/missingness misspecification",conceptual_only_fulltext_required
+composite_likelihood,availability_often_implicit,dependence_adjustment_native,can_avoid_single_graph,"M23 inclusion-exclusion composition","calibrated graph-robust scoring under informative missingness",conceptual_only_fulltext_required
+copula_latent_factor,censoring_likelihood_possible,native,factor_or_structure_uncertainty_possible,"more general joint model than pair tables","need for JMID beyond standard censored latent models",conceptual_only_fulltext_required
+robust_bayes_imprecise_probability,uncertainty_set_possible,uncertainty_set_possible,native_sensitivity_target,"not evaluated in v1/v2","useful posterior bounds without graph identification",conceptual_only_fulltext_required
+opinion_pooling_forecast_aggregation,missing_experts_possible,central_issue,often_implicit,"multi-source posterior aggregation","observable provenance constraint beyond standard dependent aggregation",conceptual_only_fulltext_required
+selective_prediction,not_identified,not_identified,responds_to_model_uncertainty,"direction C refusal output","risk guarantee tied specifically to graph/missingness ambiguity",conceptual_only_fulltext_required
+
