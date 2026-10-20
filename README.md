@@ -33,6 +33,19 @@ distinct robustness benefit from model averaging. The current method will not
 enter formal confirmation. The active research question is now identifiability
 and partial identification under joint MNAR and dependency uncertainty.
 
+The first JMID-PI theory package is recorded in:
+
+- `docs/jmid_pi_theory_protocol.md`;
+- `docs/jmid_pi_identifiability_result.md`;
+- `experiments/jmid_pi/`.
+
+It separates target-supervised identification from unlabeled-target and
+transport settings, gives an exact MNAR/dependent-evidence nonidentifiability
+witness, and derives sharp finite-alphabet bounds under likelihood-ratio
+envelopes. These are baseline results rather than a novelty claim. Further work
+is limited to determining whether operational censorship and provenance
+constraints imply a nonvacuous likelihood-ratio envelope.
+
 The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
 in `docs/jmid_prior_art_comparison.csv`. Its decision is a conditional GO for
