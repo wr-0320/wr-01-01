@@ -1,0 +1,14 @@
+cluster,work,primary_source_status,theorem_or_section,model_and_information_structure,unknown_onset,simultaneous_process_sensor_change,unknown_or_time_varying_attacked_set,adaptive_to_past_observations,guarantee,ambiguity_or_refusal,route_b_coverage_verdict,verification_notes
+fault_isolation,"Massoumnia, Verghese and Willsky (1989), Failure Detection and Identification",not_retrieved,,,,,,,,,,"Bibliographic metadata and primary theorem must be verified from full text"
+fault_isolation,"Chen and Patton (1999), Robust Model-Based Fault Diagnosis for Dynamic Systems",not_retrieved,,,,,,,,,,"Book may map the field; cite original primary theorem for the final verdict"
+fault_isolation,"Blanke et al. (2006), Diagnosis and Fault-Tolerant Control",not_retrieved,,,,,,,,,,"Book may map the field; cite original primary theorem for the final verdict"
+fault_isolation,"Ding (2008), Model-based Fault Diagnosis Techniques",not_retrieved,,,,,,,,,,"Book may map the field; cite original primary theorem for the final verdict"
+secure_estimation,"Fawzi, Tabuada and Diggavi (2014), Secure Estimation and Control for Cyber-Physical Systems Under Adversarial Attacks",not_retrieved,,,,,,,,,,"High-confidence citation; theorem claims intentionally blank"
+secure_estimation,"Pajic et al. (2017), Attack-Resilient State Estimation for Noisy Dynamical Systems",not_retrieved,,,,,,,,,,"High-confidence citation; theorem claims intentionally blank"
+attack_identification,"Pasqualetti, Doerfler and Bullo (2013), Attack Detection and Identification in Cyber-Physical Systems",not_retrieved,,,,,,,,,,"High-confidence citation; theorem claims intentionally blank"
+set_membership,"Closest set-membership fault/attack diagnosis primary theorem",candidate_not_selected,,,,,,,,,,"Select from full-text citation chain; do not infer coverage from a survey"
+multiple_model,"Closest unknown-onset process-versus-sensor fault isolation theorem",candidate_not_selected,,,,,,,,,,"Must explicitly test simultaneous changes and unknown boundary"
+adaptive_attack,"Closest causal/adaptive attack-identification theorem",candidate_not_selected,,,,,,,,,,"Must state attacker filtration and exogenous-noise assumptions"
+sequential_detection,"Closest Byzantine or compromised-sensor quickest-detection theorem",candidate_not_selected,,,,,,,,,,"Check delay/false-alarm guarantees and whether change source is attributed"
+selective_diagnosis,"Closest diagnosis result with unisolable/refusal output",candidate_not_selected,,,,,,,,,,"Reject-option prediction alone is not sufficient"
+

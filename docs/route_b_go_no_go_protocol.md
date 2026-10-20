@@ -23,8 +23,11 @@ them, gives identification assumptions, and abstains under ambiguity.
 same outputs under equal or weaker assumptions and the proposed work adds no
 new theorem, decision rule or adversarial setting.
 
-Current status: **PENDING** because scholarly full text was unavailable through
-the managed cloud proxy.
+Current status: **INCONCLUSIVE-BLOCKED**. The final audit scope, evidence rule
+and decision threshold are frozen in `route_b_final_fulltext_audit_protocol.md`;
+the controlling ledger is `route_b_fulltext_audit_matrix.csv`. Required primary
+full texts are unavailable locally and blocked by the managed cloud proxy. This
+status is not a novelty verdict.
 
 ## Gate 2: mathematical distinction
 
@@ -133,11 +136,11 @@ environment.
 
 ## Immediate decision
 
-Do not implement D-MIR yet. Complete the fault-isolation and secure-estimation
-parts of Gate 1 before adding further theorem variants. The joint-window
-syndrome theorem already supplies an uncertain-boundary/prehistory feasibility
-result, but the adaptive audit narrowed its probability guarantee and the fault-
-isolation mapping raises a direct novelty collision. It is not sufficient
-authorization for implementation. RCL remains a frozen baseline and evidence
-source; protocol v1 must not be rerun or modified.
+Do not implement D-MIR and do not add further passive-route theorem variants.
+The only remaining authorized activity on this route is the frozen full-text
+competitor audit. Until its primary-source matrix is complete, the literature
+verdict is `INCONCLUSIVE-BLOCKED` and the implementation decision is `NO-GO`.
+If the audit returns NO-GO, archive this passive route before opening a separate
+prior-art audit of active evidence verification. RCL remains a frozen baseline
+and evidence source; protocol v1 must not be rerun or modified.
 

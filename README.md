@@ -19,8 +19,18 @@ and pre-implementation gates are in:
 - `docs/route_b_joint_window_theorem.md`;
 - `docs/route_b_adaptive_attack_audit.md`;
 - `docs/route_b_fault_isolation_audit.md`;
+- `docs/route_b_final_fulltext_audit_protocol.md`;
+- `docs/route_b_fulltext_audit_matrix.csv`;
+- `docs/route_b_fulltext_access_log.md`;
+- `docs/route_b_final_direction_decision.md`;
 - `docs/route_b_direct_competitor_audit.md`;
 - `docs/route_b_go_no_go_protocol.md`.
+
+The passive Route B theory is currently `NO-GO` for implementation. Its final
+full-text novelty audit is frozen but `INCONCLUSIVE-BLOCKED`: the required
+primary papers are not present locally and the managed cloud proxy blocks the
+scholarly hosts. No theorem coverage or novelty conclusion is inferred from
+abstracts or metadata.
 
 Historical evidence copied from the source project is read-only context under
 `evidence/source_snapshot/`; new runs use `outputs/`, which is ignored by Git.
