@@ -1,0 +1,31 @@
+{
+  "status": "frozen_exploratory_diagnostic",
+  "seeds": [
+    4401,
+    4402,
+    4403,
+    4404,
+    4405,
+    4406,
+    4407,
+    4408,
+    4409,
+    4410
+  ],
+  "train_episodes": 5000,
+  "structure_fit_episodes": 3750,
+  "validation_episodes": 1250,
+  "test_episodes": 5000,
+  "methods": [
+    "M2_missing",
+    "Learned_M3",
+    "Learned_M23",
+    "Oracle_M4",
+    "Learned_M4",
+    "Graph_Averaged_M4"
+  ],
+  "candidate_count": 105,
+  "copy_probability": 0.85,
+  "composition": "logit(M2)+logit(M3)-logit(M1)",
+  "graph_weight_rule": "exp[-N_validation*(NLL-NLL_min)]"
+}

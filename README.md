@@ -17,11 +17,23 @@ The independent-generator falsification follow-up is recorded in:
 - `experiments/jmid_v2/`;
 - `docs/development_result_jmid_v2.md`.
 
-The next experiment is design-only. Its dependency-graph uncertainty protocol
-is frozen in `docs/jmid_graph_uncertainty_protocol_v3.md`. No v3 implementation
-or result exists yet, and formal confirmation remains unauthorized.
+The dependency-graph uncertainty protocol, implementation audit and completed
+single diagnostic are recorded in:
 
-The pre-v3 research-value audit is in
+- `docs/jmid_graph_uncertainty_protocol_v3.md`;
+- `docs/jmid_v3_implementation_audit.md`;
+- `experiments/jmid_v3/`;
+- `docs/development_result_jmid_v3.md`;
+- `docs/jmid_post_v3_direction_decision.md`.
+
+V3 passed its frozen empirical gate: Learned M4 improved Brier and NLL versus
+M23 in all ten seeds. The true graph was also recovered in all ten seeds and
+graph averaging collapsed to that single graph, so v3 did not demonstrate a
+distinct robustness benefit from model averaging. The current method will not
+enter formal confirmation. The active research question is now identifiability
+and partial identification under joint MNAR and dependency uncertainty.
+
+The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
 in `docs/jmid_prior_art_comparison.csv`. Its decision is a conditional GO for
 one bounded v3 diagnostic and a NO-GO for formal evaluation or an algorithm
@@ -40,10 +52,11 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m experiments.jmid_v1.run \
 ```
 
 The frozen development artifacts are stored under
-`evidence/development/jmid_v1/` and `evidence/development/jmid_v2/`; do not rerun
-them as formal evidence. V2 passed its core independent-generator gate but
-failed under a rotated dependency graph, so further work is limited to testing
-dependency-structure uncertainty before any formal evaluation.
+`evidence/development/jmid_v1/`, `evidence/development/jmid_v2/` and
+`evidence/development/jmid_v3/`; do not rerun them as formal evidence. V2 failed
+under a rotated dependency graph. V3 recovered its constrained graph exactly,
+which preserves the empirical effect but leaves genuine structure uncertainty
+and posterior identification unresolved.
 
 The earlier Route B decision, literature map, problem statement and
 pre-implementation gates remain archived in:

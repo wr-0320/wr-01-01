@@ -1,0 +1,11 @@
+{
+  "status": "GO_PROTOCOL_DESIGN",
+  "reason": "Deployable gate passed by: Learned_M4, Graph_Averaged_M4.",
+  "passed_deployable_methods": [
+    "Learned_M4",
+    "Graph_Averaged_M4"
+  ],
+  "oracle_mean_probability_advantage": true,
+  "rerun_from_saved_training_split": true,
+  "note": "Exploratory diagnostic; this decision does not establish novelty or formal evidence."
+}
