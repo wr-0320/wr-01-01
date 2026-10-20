@@ -2,8 +2,9 @@
 
 Independent research repository for robust multi-source inference under
 strategic deception. The completed RCL work and the passive Route B theory are
-retained as frozen evidence. The active exploratory direction studies joint
-inference under informative missingness and dependent evidence.
+retained as frozen evidence. JMID-PI is retained as conditional sensitivity
+analysis, and the current candidate direction is deception-risk-aware selective
+inference under a bounded research-value audit.
 
 The first frozen protocol, implementation and development interpretation are:
 
@@ -55,6 +56,21 @@ retained only as conditional sensitivity analysis; further theorem expansion,
 algorithm development and formal experiments are stopped. The next candidate
 direction is deception-risk-aware selective inference, pending a separate
 bounded audit.
+
+That selective-inference audit is now frozen in:
+
+- `docs/selective_inference_audit_protocol.md`;
+- `docs/selective_inference_problem_audit.md`;
+- `docs/selective_inference_competitor_matrix.csv`;
+- `docs/selective_inference_fulltext_access_log.md`.
+
+The mathematical screen proves that unrestricted target-law manipulation makes
+every deterministic nonzero-coverage selective-risk guarantee fail. Even under
+bounded Huber contamination, adversarial mass can concentrate inside the
+accepted region, giving an exact contamination-dependent risk floor. A bounded,
+auditable threat class is therefore required. Originality remains
+`INCONCLUSIVE-BLOCKED` until the 15 frozen primary works can be checked from
+full text, so no algorithm or experiment is authorized.
 
 The pre-v3 research-value audit remains in
 `docs/jmid_research_value_review.md`, with a machine-readable comparison table
