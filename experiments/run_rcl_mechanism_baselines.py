@@ -178,17 +178,27 @@ def analyze(rows: list[dict[str, Any]], seeds: tuple[int, ...]):
     return per_seed, summary, paired
 
 
-def write_report(destination: Path, summary, paired) -> None:
+def write_report(destination: Path, summary, paired, *, formal=False, decision=None) -> None:
     overall = {
         row["method"]: row for row in summary if row["scope"] == "overall"
     }
     differences = {
         (row["comparator"], row["metric"]): row for row in paired
     }
+    title = (
+        "# Dual-mechanism mixture formal confirmation v1"
+        if formal
+        else "# Mechanism baseline development v1"
+    )
+    evidence_note = (
+        "This is the frozen ten-seed formal confirmation result."
+        if formal
+        else "This is three-seed development evidence, not formal confirmation."
+    )
     lines = [
-        "# Mechanism baseline development v1",
+        title,
         "",
-        "This is three-seed development evidence, not formal confirmation.",
+        evidence_note,
         "",
         "| Method | Accuracy | Brier | NLL | ECE |",
         "|---|---:|---:|---:|---:|",
@@ -229,6 +239,26 @@ def write_report(destination: Path, summary, paired) -> None:
             "Intervals use paired training-seed means. Crossing zero is not interpreted as equivalence.",
         ]
     )
+    if formal:
+        if decision is None:
+            raise ValueError("formal report requires a pre-registered decision")
+        lines.extend(
+            [
+                "",
+                "## Pre-registered decision",
+                "",
+                f"Decision: **{decision['decision']}**.",
+                "",
+                "| Required condition | Passed |",
+                "|---|---:|",
+                *[
+                    f"| {name} | {'yes' if passed else 'no'} |"
+                    for name, passed in decision["conditions"].items()
+                ],
+                "",
+                "All three conditions are required; secondary results cannot rescue a failed primary rule.",
+            ]
+        )
     (destination / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -266,7 +296,11 @@ def run(
         raise ValueError("refusing to overwrite an existing output directory")
     destination.mkdir(parents=True)
     protocol = {
-        "protocol": "RCL Mechanism Baseline Development v1",
+        "protocol": (
+            "Dual-Mechanism Mixture Formal Confirmation v1"
+            if formal
+            else "RCL Mechanism Baseline Development v1"
+        ),
         "status": (
             "smoke" if smoke else "formal_confirmation" if formal else "development_not_formal"
         ),
@@ -436,10 +470,11 @@ def run(
     write_csv(destination / "per_seed_summary.csv", per_seed)
     write_csv(destination / "summary.csv", summary)
     write_csv(destination / "paired_differences.csv", paired)
-    write_report(destination, summary, paired)
+    decision = formal_decision(paired) if formal else None
+    write_report(destination, summary, paired, formal=formal, decision=decision)
     if formal:
         (destination / "decision.json").write_text(
-            json.dumps(formal_decision(paired), indent=2), encoding="utf-8"
+            json.dumps(decision, indent=2), encoding="utf-8"
         )
     return {"episodes": len(all_rows), "smoke": smoke, "formal": formal}
 
