@@ -218,7 +218,7 @@ def write_report(destination: Path, summary, paired, *, formal=False, decision=N
             "",
             "Positive accuracy favors the dual mixture; negative Brier and NLL favor it.",
             "",
-            "| Comparator | Accuracy pp (95% CI) | Brier | NLL |",
+            "| Comparator | Accuracy pp (95% CI) | Brier (95% CI) | NLL (95% CI) |",
             "|---|---:|---:|---:|",
         ]
     )
@@ -231,7 +231,8 @@ def write_report(destination: Path, summary, paired, *, formal=False, decision=N
         lines.append(
             f"| {comparator} | {100 * accuracy['difference']:+.2f} "
             f"[{100 * accuracy['ci95_low']:+.2f}, {100 * accuracy['ci95_high']:+.2f}] | "
-            f"{brier['difference']:+.4f} | {nll['difference']:+.4f} |"
+            f"{brier['difference']:+.4f} [{brier['ci95_low']:+.4f}, {brier['ci95_high']:+.4f}] | "
+            f"{nll['difference']:+.4f} [{nll['ci95_low']:+.4f}, {nll['ci95_high']:+.4f}] |"
         )
     lines.extend(
         [

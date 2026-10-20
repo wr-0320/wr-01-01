@@ -1,0 +1,92 @@
+{
+  "selected_student_dof": 3.0,
+  "selected_huber_delta": 1.345,
+  "reliability_weight_power": 1.0,
+  "candidate_validation": {
+    "student_t": [
+      {
+        "candidate": 3.0,
+        "temperature": 0.7585775750291838,
+        "validation_nll": 0.3492215933858445
+      },
+      {
+        "candidate": 5.0,
+        "temperature": 0.9120108393559097,
+        "validation_nll": 0.3501795779613713
+      },
+      {
+        "candidate": 10.0,
+        "temperature": 1.2022644346174132,
+        "validation_nll": 0.3556717027132508
+      },
+      {
+        "candidate": 30.0,
+        "temperature": 1.513561248436208,
+        "validation_nll": 0.3791081226123038
+      }
+    ],
+    "huber": [
+      {
+        "candidate": 1.0,
+        "temperature": 0.7585775750291838,
+        "validation_nll": 0.3535734520375872
+      },
+      {
+        "candidate": 1.345,
+        "temperature": 1.0,
+        "validation_nll": 0.3520567258993597
+      },
+      {
+        "candidate": 2.0,
+        "temperature": 1.3803842646028852,
+        "validation_nll": 0.3548827989820675
+      },
+      {
+        "candidate": 3.0,
+        "temperature": 1.5848931924611134,
+        "validation_nll": 0.38039984871388266
+      }
+    ]
+  },
+  "temperatures": {
+    "single_mechanism": 3.4673685045253166,
+    "global_dual_mixture": 0.12589254117941673,
+    "student_t": 0.7585775750291838,
+    "huber": 1.0,
+    "reliability_weighted": 3.1622776601683795
+  },
+  "global_reliability": [
+    [
+      0.9557672305249905,
+      0.9557672305249905,
+      0.9557672305249905
+    ],
+    [
+      0.9557672305249905,
+      0.9557672305249905,
+      0.9557672305249905
+    ],
+    [
+      0.9557672305249905,
+      0.9557672305249905,
+      0.9557672305249905
+    ]
+  ],
+  "cell_reliability": [
+    [
+      0.9512548262548263,
+      0.9592445328031809,
+      0.9572936660268714
+    ],
+    [
+      0.9575863576738085,
+      0.947539461467038,
+      0.9569080408707241
+    ],
+    [
+      0.9607083563918096,
+      0.958600583090379,
+      0.9500263019463441
+    ]
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "selected_student_dof": 3.0,
+  "selected_huber_delta": 1.0,
+  "reliability_weight_power": 1.0,
+  "candidate_validation": {
+    "student_t": [
+      {
+        "candidate": 3.0,
+        "temperature": 0.72443596007499,
+        "validation_nll": 0.3654544364745027
+      },
+      {
+        "candidate": 5.0,
+        "temperature": 0.8317637711026711,
+        "validation_nll": 0.3788083987947863
+      },
+      {
+        "candidate": 10.0,
+        "temperature": 1.096478196143185,
+        "validation_nll": 0.41018520083815396
+      },
+      {
+        "candidate": 30.0,
+        "temperature": 1.9054607179632472,
+        "validation_nll": 0.4684394816446192
+      }
+    ],
+    "huber": [
+      {
+        "candidate": 1.0,
+        "temperature": 0.6918309709189364,
+        "validation_nll": 0.38190987676683846
+      },
+      {
+        "candidate": 1.345,
+        "temperature": 0.8317637711026711,
+        "validation_nll": 0.38853840675891554
+      },
+      {
+        "candidate": 2.0,
+        "temperature": 1.3803842646028852,
+        "validation_nll": 0.42529024938658533
+      },
+      {
+        "candidate": 3.0,
+        "temperature": 2.2908676527677736,
+        "validation_nll": 0.4822869187250707
+      }
+    ]
+  },
+  "temperatures": {
+    "single_mechanism": 2.7542287033381663,
+    "global_dual_mixture": 0.5754399373371569,
+    "student_t": 0.72443596007499,
+    "huber": 0.6918309709189364,
+    "reliability_weighted": 2.6302679918953813
+  },
+  "global_reliability": [
+    [
+      0.9569436021831413,
+      0.9569436021831413,
+      0.9569436021831413
+    ],
+    [
+      0.9569436021831413,
+      0.9569436021831413,
+      0.9569436021831413
+    ],
+    [
+      0.9569436021831413,
+      0.9569436021831413,
+      0.9569436021831413
+    ]
+  ],
+  "cell_reliability": [
+    [
+      0.9548543689320388,
+      0.960261569416499,
+      0.9571020019065777
+    ],
+    [
+      0.9574656623836951,
+      0.9488950276243094,
+      0.9582772543741588
+    ],
+    [
+      0.9605555555555556,
+      0.960166468489893,
+      0.9523809523809523
+    ]
+  ]
+}

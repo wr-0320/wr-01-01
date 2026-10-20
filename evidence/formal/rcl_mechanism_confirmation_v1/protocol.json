@@ -1,0 +1,55 @@
+{
+  "protocol": "Dual-Mechanism Mixture Formal Confirmation v1",
+  "status": "formal_confirmation",
+  "seeds": [
+    13001,
+    13002,
+    13003,
+    13004,
+    13005,
+    13006,
+    13007,
+    13008,
+    13009,
+    13010
+  ],
+  "families": [
+    "honest",
+    "concealment",
+    "decoy",
+    "multi_source",
+    "delayed",
+    "switch",
+    "adaptive"
+  ],
+  "methods": [
+    "single_mechanism",
+    "global_dual_mixture",
+    "student_t",
+    "huber",
+    "reliability_weighted"
+  ],
+  "episodes_per_method_family_seed": 100,
+  "expected_test_episodes": 35000,
+  "mechanism_label_budget": "same full training cell labels for every method",
+  "shared_reliable_emissions": true,
+  "global_mixture_compromised_emissions": "same labeled training sample",
+  "student_dof_validation_grid": [
+    3.0,
+    5.0,
+    10.0,
+    30.0
+  ],
+  "huber_delta_validation_grid": [
+    1.0,
+    1.345,
+    2.0,
+    3.0
+  ],
+  "reliability_weight_power": 1.0,
+  "temperature_validation_grid": "geomspace(0.1, 10.0, 101)",
+  "fixed_commit_step": 4,
+  "interval_unit": "training seed",
+  "test_tuning_forbidden": true,
+  "formal_claim_allowed": true
+}

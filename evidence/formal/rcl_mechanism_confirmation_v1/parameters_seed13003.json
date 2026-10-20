@@ -1,0 +1,92 @@
+{
+  "selected_student_dof": 3.0,
+  "selected_huber_delta": 1.0,
+  "reliability_weight_power": 1.0,
+  "candidate_validation": {
+    "student_t": [
+      {
+        "candidate": 3.0,
+        "temperature": 0.34673685045253166,
+        "validation_nll": 0.2781706675606281
+      },
+      {
+        "candidate": 5.0,
+        "temperature": 0.5011872336272724,
+        "validation_nll": 0.29081085026509923
+      },
+      {
+        "candidate": 10.0,
+        "temperature": 0.7585775750291838,
+        "validation_nll": 0.308932407098687
+      },
+      {
+        "candidate": 30.0,
+        "temperature": 1.2589254117941675,
+        "validation_nll": 0.3313947564817557
+      }
+    ],
+    "huber": [
+      {
+        "candidate": 1.0,
+        "temperature": 0.4168693834703354,
+        "validation_nll": 0.2914501552176856
+      },
+      {
+        "candidate": 1.345,
+        "temperature": 0.6309573444801932,
+        "validation_nll": 0.3025815106897136
+      },
+      {
+        "candidate": 2.0,
+        "temperature": 1.0,
+        "validation_nll": 0.31445133494912664
+      },
+      {
+        "candidate": 3.0,
+        "temperature": 1.3803842646028852,
+        "validation_nll": 0.3311078293660632
+      }
+    ]
+  },
+  "temperatures": {
+    "single_mechanism": 1.7378008287493754,
+    "global_dual_mixture": 0.19054607179632474,
+    "student_t": 0.34673685045253166,
+    "huber": 0.4168693834703354,
+    "reliability_weighted": 1.6595869074375604
+  },
+  "global_reliability": [
+    [
+      0.9553020282186949,
+      0.9553020282186949,
+      0.9553020282186949
+    ],
+    [
+      0.9553020282186949,
+      0.9553020282186949,
+      0.9553020282186949
+    ],
+    [
+      0.9553020282186949,
+      0.9553020282186949,
+      0.9553020282186949
+    ]
+  ],
+  "cell_reliability": [
+    [
+      0.9514423076923076,
+      0.9604156358238496,
+      0.9583931133428981
+    ],
+    [
+      0.9578339991122947,
+      0.9488609948860995,
+      0.9555160142348754
+    ],
+    [
+      0.9605993340732519,
+      0.9592439456585942,
+      0.941790225151016
+    ]
+  ]
+}

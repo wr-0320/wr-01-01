@@ -12,6 +12,7 @@
 | Student-t likelihood | 3 matched development seeds; 80.62% accuracy, 0.2149 Brier, 0.3208 NLL | Implemented direct robust-generative comparator; interval versus global mixture crosses zero | Keep as required secondary formal comparator |
 | Reliability-weighted fusion | 3 matched development seeds; 77.48% accuracy, 0.2666 Brier, 0.4220 NLL | Clean matched linear weighting does not reproduce the dual-mixture result | Keep as a structural control; do not substitute the older learned attenuation study |
 | Huber robust likelihood | 3 matched development seeds; 81.05% accuracy, 0.2129 Brier, 0.3195 NLL | Strongest development robust comparator; interval versus global mixture crosses zero | Frozen as the primary formal comparator |
+| Formal dual mixture versus robust baselines | 10 reserved seeds, 35,000 paired model-episode evaluations; global mixture 82.20% accuracy, 0.2148 Brier, 0.3367 NLL; Huber 80.74%, 0.2196, 0.3321 | Pre-registered decision `NOT_CONFIRMED`: accuracy guard passed; NLL and Brier superiority conditions failed | Report without adding seeds or changing the primary comparator; retain raw formal rows and integrity manifest |
 | Contamination-rate scan | Missing | Sensitivity gap | Single-factor scan after direct baselines |
 | Reliability-error scan | Missing | Sensitivity gap | Bias and random perturbation after direct baselines |
 | Correlation-strength scan | One fixed strength only | Sensitivity gap | Extend from independence to several frozen strengths |

@@ -80,6 +80,8 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python \
 Results and the exact full-precision audit are documented in
 `docs/development_result_mechanism_baselines_v1.md` and
 `docs/heterogeneity_result_audit.md`. The formal protocol is frozen in
-`docs/formal_confirmation_protocol_v1.md`; its reserved entry point has not been
-run.
+`docs/formal_confirmation_protocol_v1.md`; its reserved entry point was executed
+exactly once and must not be rerun for protocol v1. The formal outcome is
+`NOT_CONFIRMED`; see `docs/formal_confirmation_result_v1.md` and the versioned
+artifacts under `evidence/formal/rcl_mechanism_confirmation_v1/`.
 

@@ -1,6 +1,9 @@
 # Dual-mechanism mixture formal confirmation protocol v1
 
-Status: **frozen and not yet run**.
+Status: **frozen; executed once on 2026-10-20 without changing the protocol**.
+
+The pre-registered outcome was `NOT_CONFIRMED`. The result and integrity audit are
+recorded in `docs/formal_confirmation_result_v1.md`.
 
 ## Confirmatory question
 
@@ -77,4 +80,5 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python \
   -m experiments.run_rcl_mechanism_formal
 ```
 
-This command has not been executed as part of freezing this protocol.
+This command was executed once after commit `f7544ee` corrected formal report
+labelling. That reporting-only fix did not alter any item in this protocol.

@@ -63,6 +63,8 @@ development evidence. They selected the global mixture and Huber primary
 comparator but cannot establish the final claim.
 
 The formal method set, ten fresh seeds, run size, metrics, confidence intervals,
-success rule, and stopping rule are frozen in
-`docs/formal_confirmation_protocol_v1.md`. Formal evaluation must write to a new
-directory and must not overwrite or pool development outputs.
+success rule, and stopping rule were frozen in
+`docs/formal_confirmation_protocol_v1.md`. The experiment was executed once and
+returned `NOT_CONFIRMED`; see `docs/formal_confirmation_result_v1.md`. Its formal
+output remains separate from all development evidence and must not be rerun or
+pooled with development outputs.

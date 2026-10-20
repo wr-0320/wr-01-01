@@ -65,3 +65,5 @@ def test_formal_report_is_marked_as_confirmation(tmp_path):
     assert "frozen ten-seed formal confirmation result" in report
     assert "three-seed development evidence" not in report
     assert "Decision: **CONFIRMED**" in report
+    assert "Brier (95% CI)" in report
+    assert "-0.0100 [-0.0200, -0.0010]" in report

@@ -1,0 +1,92 @@
+{
+  "selected_student_dof": 30.0,
+  "selected_huber_delta": 2.0,
+  "reliability_weight_power": 1.0,
+  "candidate_validation": {
+    "student_t": [
+      {
+        "candidate": 3.0,
+        "temperature": 0.6025595860743578,
+        "validation_nll": 0.33385725451229126
+      },
+      {
+        "candidate": 5.0,
+        "temperature": 0.6309573444801932,
+        "validation_nll": 0.33133975786917796
+      },
+      {
+        "candidate": 10.0,
+        "temperature": 0.6606934480075961,
+        "validation_nll": 0.32812895839865724
+      },
+      {
+        "candidate": 30.0,
+        "temperature": 0.72443596007499,
+        "validation_nll": 0.32688045179452324
+      }
+    ],
+    "huber": [
+      {
+        "candidate": 1.0,
+        "temperature": 0.5495408738576245,
+        "validation_nll": 0.33650147473433134
+      },
+      {
+        "candidate": 1.345,
+        "temperature": 0.6309573444801932,
+        "validation_nll": 0.33110592369571457
+      },
+      {
+        "candidate": 2.0,
+        "temperature": 0.6918309709189364,
+        "validation_nll": 0.32489658198172083
+      },
+      {
+        "candidate": 3.0,
+        "temperature": 0.72443596007499,
+        "validation_nll": 0.3260756396463486
+      }
+    ]
+  },
+  "temperatures": {
+    "single_mechanism": 0.8317637711026711,
+    "global_dual_mixture": 0.7585775750291838,
+    "student_t": 0.72443596007499,
+    "huber": 0.6918309709189364,
+    "reliability_weighted": 0.7943282347242815
+  },
+  "global_reliability": [
+    [
+      0.9560911191812479,
+      0.9560911191812479,
+      0.9560911191812479
+    ],
+    [
+      0.9560911191812479,
+      0.9560911191812479,
+      0.9560911191812479
+    ],
+    [
+      0.9560911191812479,
+      0.9560911191812479,
+      0.9560911191812479
+    ]
+  ],
+  "cell_reliability": [
+    [
+      0.9545889101338432,
+      0.9571499750871948,
+      0.9588516746411483
+    ],
+    [
+      0.9574844995571302,
+      0.9506685108344859,
+      0.9556252801434334
+    ],
+    [
+      0.9614955357142857,
+      0.9581089168162776,
+      0.9478723404255319
+    ]
+  ]
+}

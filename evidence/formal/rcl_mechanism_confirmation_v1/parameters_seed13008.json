@@ -1,0 +1,92 @@
+{
+  "selected_student_dof": 3.0,
+  "selected_huber_delta": 1.0,
+  "reliability_weight_power": 1.0,
+  "candidate_validation": {
+    "student_t": [
+      {
+        "candidate": 3.0,
+        "temperature": 0.7585775750291838,
+        "validation_nll": 0.43965729355992195
+      },
+      {
+        "candidate": 5.0,
+        "temperature": 1.2589254117941675,
+        "validation_nll": 0.481610232986666
+      },
+      {
+        "candidate": 10.0,
+        "temperature": 2.511886431509581,
+        "validation_nll": 0.5507418943270598
+      },
+      {
+        "candidate": 30.0,
+        "temperature": 4.570881896148752,
+        "validation_nll": 0.6412029579333166
+      }
+    ],
+    "huber": [
+      {
+        "candidate": 1.0,
+        "temperature": 1.2022644346174132,
+        "validation_nll": 0.5001816859492508
+      },
+      {
+        "candidate": 1.345,
+        "temperature": 1.6595869074375604,
+        "validation_nll": 0.50635575219089
+      },
+      {
+        "candidate": 2.0,
+        "temperature": 3.019951720402016,
+        "validation_nll": 0.5607173999155641
+      },
+      {
+        "candidate": 3.0,
+        "temperature": 5.495408738576245,
+        "validation_nll": 0.6574834040499463
+      }
+    ]
+  },
+  "temperatures": {
+    "single_mechanism": 7.2443596007499025,
+    "global_dual_mixture": 1.513561248436208,
+    "student_t": 0.7585775750291838,
+    "huber": 1.2022644346174132,
+    "reliability_weighted": 6.918309709189366
+  },
+  "global_reliability": [
+    [
+      0.9560160943614617,
+      0.9560160943614617,
+      0.9560160943614617
+    ],
+    [
+      0.9560160943614617,
+      0.9560160943614617,
+      0.9560160943614617
+    ],
+    [
+      0.9560160943614617,
+      0.9560160943614617,
+      0.9560160943614617
+    ]
+  ],
+  "cell_reliability": [
+    [
+      0.9527710843373494,
+      0.9582284851534977,
+      0.9563774300616406
+    ],
+    [
+      0.9577965348733896,
+      0.9494668521094112,
+      0.9552643470402169
+    ],
+    [
+      0.9609810479375697,
+      0.9647761194029851,
+      0.946786090621707
+    ]
+  ]
+}

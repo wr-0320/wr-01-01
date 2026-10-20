@@ -1,0 +1,10 @@
+{
+  "decision": "NOT_CONFIRMED",
+  "primary_comparator": "huber",
+  "conditions": {
+    "nll_upper_below_zero": false,
+    "brier_upper_below_zero": false,
+    "accuracy_lower_above_minus_two_points": true
+  },
+  "all_conditions_required": true
+}
