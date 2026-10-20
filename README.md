@@ -11,6 +11,12 @@ The first frozen protocol, implementation and development interpretation are:
 - `experiments/jmid_v1/`;
 - `docs/development_result_jmid_v1.md`.
 
+The independent-generator falsification follow-up is recorded in:
+
+- `docs/jmid_falsification_protocol_v2.md`;
+- `experiments/jmid_v2/`;
+- `docs/development_result_jmid_v2.md`.
+
 This stage uses a controlled binary simulator and four small empirical models.
 It is not a formal confirmation study or an algorithm novelty claim. The first
 result permits only an independently generated falsification study with a
@@ -24,7 +30,10 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m experiments.jmid_v1.run \
 ```
 
 The frozen development artifacts are stored under
-`evidence/development/jmid_v1/`; do not rerun them as formal evidence.
+`evidence/development/jmid_v1/` and `evidence/development/jmid_v2/`; do not rerun
+them as formal evidence. V2 passed its core independent-generator gate but
+failed under a rotated dependency graph, so further work is limited to testing
+dependency-structure uncertainty before any formal evaluation.
 
 The earlier Route B decision, literature map, problem statement and
 pre-implementation gates remain archived in:
