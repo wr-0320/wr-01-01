@@ -1,0 +1,46 @@
+{
+  "status": "exploratory_development",
+  "seeds": [
+    2401,
+    2402,
+    2403
+  ],
+  "train_episodes": 4000,
+  "test_episodes": 5000,
+  "alpha": 1.0,
+  "conditions": {
+    "A_random_independent": [
+      0.0,
+      0.0
+    ],
+    "B_strategic_independent": [
+      1.0,
+      0.0
+    ],
+    "C_random_dependent": [
+      0.0,
+      0.9
+    ],
+    "D_strategic_dependent": [
+      1.0,
+      0.9
+    ]
+  },
+  "shift_train": [
+    0.2,
+    0.2
+  ],
+  "shift_strengths": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "methods": [
+    "M1_naive",
+    "M2_missing",
+    "M3_dependence",
+    "M4_joint"
+  ]
+}

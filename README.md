@@ -1,15 +1,33 @@
-# Dynamic Deception Inference Study
+# Joint Missingness and Dependent Evidence Study
 
 Independent research repository for robust multi-source inference under
-strategic deception. The completed RCL work is retained as frozen evidence and
-as a baseline. The active research direction, **Route B**, studies whether an
-online system can distinguish a hidden-situation transition from a change in the
-observation/deception mechanism and abstain when the distinction is not
-identifiable.
+strategic deception. The completed RCL work and the passive Route B theory are
+retained as frozen evidence. The active exploratory direction studies joint
+inference under informative missingness and dependent evidence.
 
-Route B is currently in literature and mathematical validation. No D-MIR method
-has been implemented. The research decision, literature map, problem statement
-and pre-implementation gates are in:
+The first frozen protocol, implementation and development interpretation are:
+
+- `docs/jmid_exploratory_protocol_v1.md`;
+- `experiments/jmid_v1/`;
+- `docs/development_result_jmid_v1.md`.
+
+This stage uses a controlled binary simulator and four small empirical models.
+It is not a formal confirmation study or an algorithm novelty claim. The first
+result permits only an independently generated falsification study with a
+simple M2+M3 composition before any larger investment.
+
+Run a wiring check without touching versioned evidence:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m experiments.jmid_v1.run \
+  --smoke --output /tmp/jmid_v1_smoke
+```
+
+The frozen development artifacts are stored under
+`evidence/development/jmid_v1/`; do not rerun them as formal evidence.
+
+The earlier Route B decision, literature map, problem statement and
+pre-implementation gates remain archived in:
 
 - `docs/route_b_research_decision.md`;
 - `docs/route_b_literature_scope.md`;
