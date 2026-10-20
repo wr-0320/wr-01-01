@@ -1,5 +1,10 @@
 # Existing evidence, gaps, and reuse plan
 
+The RCL experimental program is frozen. Route B treats these records as prior
+evidence and baselines; none of them demonstrates online attribution of a
+situation change versus a mechanism change. See
+`route_b_research_decision.md` and `route_b_go_no_go_protocol.md`.
+
 | Study | Existing evidence | Status for RCL paper | Reuse |
 |---|---|---|---|
 | Fixed-prior RCL | 5 seeds, 7 families, 8 methods, 28,000 episodes; RCL 81.9%; matched single mechanism 77.8% | Core prior evidence, but supervision and structural attribution remain incomplete | Reuse protocol, simulator, fit/calibration rules, paired scenario construction, and reporting code |

@@ -1,14 +1,23 @@
-# RCL Paper
+# Dynamic Deception Inference Study
 
-Independent research repository for the working paper **Source-Region
-Conditioned Mixture Likelihood Inference for Contaminated Multi-Source
-Observations**.
+Independent research repository for robust multi-source inference under
+strategic deception. The completed RCL work is retained as frozen evidence and
+as a baseline. The active research direction, **Route B**, studies whether an
+online system can distinguish a hidden-situation transition from a change in the
+observation/deception mechanism and abstain when the distinction is not
+identifiable.
 
-The current milestone freezes the study boundary and compares four matched
-structures: single mechanism, global mixture, source-level mixture, and the full
-source-region RCL. Historical evidence copied from the source project is read-only
-context under `evidence/source_snapshot/`; new runs use `outputs/`, which is ignored
-by Git.
+Route B is currently in literature and mathematical validation. No D-MIR method
+has been implemented. The research decision, literature map, problem statement
+and pre-implementation gates are in:
+
+- `docs/route_b_research_decision.md`;
+- `docs/route_b_literature_scope.md`;
+- `docs/route_b_problem_formulation.md`;
+- `docs/route_b_go_no_go_protocol.md`.
+
+Historical evidence copied from the source project is read-only context under
+`evidence/source_snapshot/`; new runs use `outputs/`, which is ignored by Git.
 
 ## Setup
 
@@ -18,6 +27,9 @@ by Git.
 
 This creates `.venv` inside this repository and installs a regular wheel. It does
 not use an editable install or dependencies from the source project's environment.
+
+The commands below reproduce or inspect the archived RCL stage. They are not the
+active Route B implementation plan.
 
 ## Checks
 
